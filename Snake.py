@@ -1,4 +1,4 @@
-hipimport pickle
+import pickle
 import time
 import datetime
 import multiprocessing as mp
