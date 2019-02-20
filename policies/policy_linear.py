@@ -3,6 +3,10 @@ import numpy as np
 import operator
 
 EPSILON = 0.05
+GAMMA = 0.5
+LEARNING_RATE = 0.05
+VICINITY = 2
+FEATURE_NUM = len(['FoodVicinity_1', 'FoodVicinity_2', 'FoodVicinity_3', 'FieldEmpty'])
 
 class Linear(bp.Policy):
     """
@@ -12,25 +16,35 @@ class Linear(bp.Policy):
 
     def cast_string_args(self, policy_args):
         policy_args['epsilon'] = float(policy_args['epsilon']) if 'epsilon' in policy_args else EPSILON
+        policy_args['gamma'] = float(policy_args['gamma']) if 'gamma' in policy_args else GAMMA
+        policy_args['learning_rate'] = float(policy_args['lr']) if 'lr' in policy_args else LEARNING_RATE
+        policy_args['vicinity'] = float(policy_args['vicinity']) if 'vicinity' in policy_args else VICINITY
 
         return policy_args
 
     def init_run(self):
         self.r_sum = 0
-        no_features = len(['FoodVicinity_1', 'FoodVicinity_2', 'FoodVicinity_3', 'FieldEmpty'])
-        weights = np.random.uniform(0, 1, no_features)
+        weights = np.random.uniform(0, 1, FEATURE_NUM)
         self.weights = weights / weights.sum()
-        self.vicinity = vicinity_param
-        self.features = np.zeros(no_features)
+        self.features = np.zeros(FEATURE_NUM)
+        self.last_actions = []  #
+        self.last_qvalues = []
+        self.last_deltas = []
 
     def learn(self, round, prev_state, prev_action, reward, new_state, too_slow):
+
+        last_features = self.last_features[-1]
+        delta = self.last_deltas[-1]
+
+        self.weights = self.weights - self.learning_rate * (delta * last_features).mean(axis=0)
 
         try:
             if round % 100 == 0:
                 if round > self.game_duration - self.score_scope:
-                    self.log("Rewards in last 100 rounds which counts towards the score: " + str(self.r_sum), 'VALUE')
+                    self.log("Rewards in last 100 rounds which counts towards the score: " + str(
+                        self.r_sum), 'VALUE')
                 else:
-                    self.log("Rewards in last 100 rounds: " + str(self.r_sum), 'VALUE')
+                    self.log("Rewards in last 100 rounds: " + str(self.r_sum, self.weights.tolist()), 'VALUE')
                 self.r_sum = 0
             else:
                 self.r_sum += reward
@@ -39,7 +53,7 @@ class Linear(bp.Policy):
             self.log("Something Went Wrong...", 'EXCEPTION')
             self.log(e, 'EXCEPTION')
 
-    def getVicinityMap(self, board, center):
+    def getVicinityMap(self, center, board):
         board_size = board.shape
         vicinity = self.vicinity
 
@@ -74,63 +88,75 @@ class Linear(bp.Policy):
 
         return big_board[top:bottom, left:right]
 
+    def getQValue(self, VicinityMap):
+        center = (self.vicinity, self.vicinity)
+        weights = self.weights
+        features = self.features
+
+        # look at the board in the relevant position:
+        # check which food is in vicinity after move
+        for feature_idx, food_value in enumerate([6, 7, 8]):
+
+            m = (VicinityMap == food_value)
+            food_positions = np.matrix(np.where(m)).T
+
+            if food_positions.shape == (0, 2):  # if no food of this kind was found
+                dist = 10
+            else:
+                distances = []
+                for food_pos in food_positions:
+                    x, y = food_pos.tolist()[0][0], food_pos.tolist()[0][1]
+                    dist = abs(center[0] - x) + abs(center[1] - y)
+                    distances.append(dist)
+                    dist = min(distances)
+            # features[feature_idx] = 10 - dist
+            features[feature_idx] = 1 / (dist + 0.001)
+
+        # now check if next field is free
+        if VicinityMap[center] > 5 or VicinityMap[center] < 0:  # is free
+            free = 1
+        else:  # is onther snake
+            free = 0
+        features[3] = free
+        # normalize features
+        f = features / np.linalg.norm(features)
+
+        q_value = f.dot(weights)  # + bias
+        return q_value, f
+
     def act(self, round, prev_state, prev_action, reward, new_state, too_slow):
 
         board, head = new_state
         head_pos, direction = head
-        vicinity = self.vicinity
-        vicinity = 2
-        weights = self.weights
-        features = self.features
 
         if np.random.rand() < self.epsilon:
-            return np.random.choice(bp.Policy.ACTIONS)
+            action = np.random.choice(bp.Policy.ACTIONS)
+            next_position = head_pos.move(bp.Policy.TURNS[direction][action])
+            VicinityMap = self.getVicinityMap(next_position, board)
+            q_value, features = self.getQValue(VicinityMap)
 
         else:
-            q_values = dict()
+            res = {'features': [],
+                   'q_values': np.zeros(3),
+                   'action': []}
             for dir_idx, a in enumerate(list(np.random.permutation(bp.Policy.ACTIONS))):
+                # get a Position object of the position in the relevant direction from the head:
                 next_position = head_pos.move(bp.Policy.TURNS[direction][a])
-                r = next_position[0]
-                c = next_position[1]
-                center_idx = (vicinity, vicinity)
 
-                # TODO: that we also look through the walls
+                VicinityMap = self.getVicinityMap(next_position, board)
 
-                VicinityMap = self.getVicinityMap(board, next_position)
+                q_value, features_a = self.getQValue(VicinityMap)  # getQValue(a, next_position, board, direction)
+                res['features'].append(features_a)
+                res['action'].append(a)
+                res['q_values'][dir_idx] = q_value
 
-                # look at the board in the relevant position:
-                # check which food is in vicinity after move
-                for feature_idx, food_value in enumerate([6, 7, 8]):
+            q_value, q_max_idx = np.max(res['q_values']), np.argmax(res['q_values'])
+            features = res['features'][q_max_idx]
+            action = res['action'][q_max_idx]
 
-                    m = (VicinityMap == food_value)
-                    food_positions = np.matrix(np.where(m)).T
-                    print(feature_idx)
-
-                    if food_positions.shape == (0, 2):  # if no food of this kind was found
-                        dist = 10
-                    else:
-                        distances = []
-                        for food_pos in food_positions:
-                            print(food_pos)
-                            x, y = food_pos.tolist()[0][0], food_pos.tolist()[0][1]
-                            dist = abs(center_idx[0] - x) + abs(center_idx[1] - y)
-                            distances.append(dist)
-                            dist = min(distances)
-                    features[feature_idx] = 10 - dist
-                    # features[feature_idx] = 1/(dist + 0.001)
-
-                # now check if next field is free
-                if board[r, c] > 5 or board[r, c] < 0:
-                    free = 5
-                else:
-                    free = 0
-                features[3] = free
-                # normalize features
-                f = features / np.linalg.norm(features)
-
-                q_value = f.dot(weights)  # + bias
-
-                q_values.update({dir_idx: q_value})
-
-            action_idx, q_value = max(q_values.items(), key=operator.itemgetter(1))
-            return bp.Policy.ACTIONS[action_idx]
+        delta = self.last_qvalues[-1] - (reward + (self.gamma * q_value))
+        self.last_actions = self.last_actions + [action]
+        self.last_qvalues = self.last_qvalues + [q_value]
+        self.last_features = self.last_features + [features]
+        self.last_deltas = self.last_deltas + [delta]
+        return action
