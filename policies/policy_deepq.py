@@ -4,10 +4,67 @@ import keras
 import numpy as np
 from policies import base_policy as bp
 
-
 EPSILON = 0.3
 VICINITY = 5
 DROPOUT_RATE = 0.2
+
+class DQNetwork():
+    def __init__(self, input_shape, alpha=0.1, gamma=0.99,
+                 dropout_prob=0.1):
+
+        self.model = Sequential()
+        self.model.add(Conv2D(32, kernel_size=(3, 3),
+                         activation='relu',
+                         input_shape=self.input_shape))
+        self.model.add(Conv2D(64, (3, 3), activation='relu'))
+        self.model.add(MaxPooling2D(pool_size=(2, 2)))
+        self.model.add(Dropout(self.dropout_rate))
+        self.model.add(Flatten())
+        self.model.add(Dense(128, activation='relu'))
+        self.model.add(Dropout(self.dropout_rate))
+        self.model.add(Dense(self.num_actions, activation='softmax'))
+
+        self.model.compile(loss=keras.losses.categorical_crossentropy,
+                      optimizer='Adam',  # default learning rate = 0.01
+                      metrics=['accuracy'])
+
+    def learn(self, batches):
+        x = []
+        y = []
+        
+        for batch in batches:  # ((s_t, a_t) = q_t, r_t, s_(t+1))
+            # calculate the gradiend step: y_t = r_t + gamma * Q_(t+1)
+            x.append(batch['s_t'])
+            q_tp1 = np.max(self.predict(batch['s_tp1']))
+
+        # for datapoint in batch:
+        #
+        #     # The error must be 0 on all actions except the one taken
+        #     t = list(self.predict(datapoint['source'])[0])
+        #     if datapoint['final']:
+        #         t[datapoint['action']] = datapoint['reward']
+        #     else:
+        #         t[datapoint['action']] = datapoint['reward'] + \
+        #                                  self.gamma * next_q_value
+        #
+        #     t_train.append(t)
+        #
+        #     # Prepare inputs and targets
+        # x_train = np.asarray(x_train).squeeze()
+        # t_train = np.asarray(t_train).squeeze()
+        #
+        # # Train the model for one epoch
+        # h = self.model.fit(x_train,
+        #                    t_train,
+        #                    batch_size=32,
+        #                    nb_epoch=1)
+
+    def predict(self, state):
+        q_values = self.model.predict(state, batch_size=1)
+        return q_values
+
+
+
 
 class MyPolicy(bp.Policy):
     """
@@ -26,6 +83,9 @@ class MyPolicy(bp.Policy):
         self.input_shape = (self.vicinity*2+1, self.vicinity*2+1, 1)
         self.num_actions = len(['N', 'E', 'S', 'W'])
         self.id2dir = {0: 'N', 1: 'E', 2: 'S', 3: 'W'}
+        self.memory = []
+        self.network = DQNetwork(self.input_shape, self.dropout_rate)
+        print(self.network.summary())
 
     def dir2turn(self, head_dir, moving_dir):
         TURNS = {
@@ -73,36 +133,11 @@ class MyPolicy(bp.Policy):
         return big_board[top:bottom, left:right]
 
 
-    def cnn(self):
-        """
-        defines and trains a cnn model
-        :param mnist_data: the MNIST data
-        :param batch_size: batch size for training
-        :param epochs: epochs of training
-        :param dropout_rate: dropout rate between the layers
-        :return: the trained cnn model and its training history
-        """
-
-        model = Sequential()
-        model.add(Conv2D(32, kernel_size=(3, 3),
-                         activation='relu',
-                         input_shape=self.input_shape))
-        model.add(Conv2D(64, (3, 3), activation='relu'))
-        model.add(MaxPooling2D(pool_size=(2, 2)))
-        model.add(Dropout(self.dropout_rate))
-        model.add(Flatten())
-        model.add(Dense(128, activation='relu'))
-        model.add(Dropout(self.dropout_rate))
-        model.add(Dense(self.num_actions, activation='softmax'))
-        
-        model.compile(loss=keras.losses.categorical_crossentropy,
-                      optimizer='Adam',  # default learning rate = 0.01
-                      metrics=['accuracy'])
-        
-        return model
-
 
     def learn(self, round, prev_state, prev_action, reward, new_state, too_slow):
+        random_batches = np.random.choice(self.memory, self.batch_size)
+
+        self.network.learn(random_batches)
 
         try:
             if round % 100 == 0:
@@ -118,28 +153,35 @@ class MyPolicy(bp.Policy):
             self.log("Something Went Wrong...", 'EXCEPTION')
             self.log(e, 'EXCEPTION')
 
+    def getQValue(self, state):
+        q_values = self.model.predict(state, batch_size=1)
+        q_max, q_max_idx = np.max(q_values), np.argmax(q_values)
+        moving_dir = self.id2dir[q_max_idx]
+        return q_value, moving_dir
+
     def act(self, round, prev_state, prev_action, reward, new_state, too_slow):
 
         board, head = new_state
         head_pos, direction = head
+        state_before = self.getVicinityMap(head_pos)
 
         if np.random.rand() < self.epsilon:
-            return np.random.choice(bp.Policy.ACTIONS)
+            action = np.random.choice(bp.Policy.ACTIONS)
+            moving_dir = bp.Policy.TURNS[direction][action]
 
         else:
-            net = self.cnn() #  dont define new every time. save progress somewhere and update and whatever
-            map = self.getVicinityMap(head_pos)
-            map_resized = map[np.newaxis, ..., np.newaxis]  # (1, 11, 11, 1),
-            # would like to do this: map.reshape(samples, input_shape[0], input_shape[1], input_shape[3) but doesnt work
-            q_values = net.predict(map_resized)
-            q_max, q_max_idx = np.max(q_values), np.argmax(q_values)
-            moving_dir = self.id2dir[q_max_idx]
+            q_value, moving_dir = getQValue(state_before)
             action = self.dir2turn(head_dir=direction, moving_dir=moving_dir)
 
-            return action
+        next_position = bp.Policy.Position.move(moving_dir)
+        state_after = self.getVicinityMap(next_position)
 
-    def add_memory(self):
+        self.memory += [{'s_t' : state_before, 'a_t' : action, 'r_t' : reward, 's_tp1' : state_after}]
+        return action
+
+    def add_memory(self, ):
         """
-        add action and so on to memory for memory replay
+        add transition to memory for memory replay
         :return:
+
         """
