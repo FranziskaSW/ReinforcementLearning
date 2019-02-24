@@ -27,7 +27,7 @@ class Linear(bp.Policy):
         weights = np.random.uniform(0, 1, FEATURE_NUM)
         self.weights = weights / weights.sum()
         self.features = np.zeros(FEATURE_NUM)
-        self.last_actions = []  #
+        # self.last_actions = []  #
         self.last_qvalues = []
         self.last_deltas = []
 
@@ -54,7 +54,7 @@ class Linear(bp.Policy):
             self.log(e, 'EXCEPTION')
 
     def getQValue(self, field):
-        center = (self.vicinity, self.vicinity)
+        # center = (self.vicinity, self.vicinity)
         weights = self.weights
         features = self.features
 
@@ -100,7 +100,7 @@ class Linear(bp.Policy):
             action = res['action'][q_max_idx]
 
         delta = self.last_qvalues[-1] - (reward + (self.gamma * q_value))
-        self.last_actions = self.last_actions + [action]
+        # self.last_actions = self.last_actions + [action]
         self.last_qvalues = self.last_qvalues + [q_value]
         self.last_features = self.last_features + [features]
         self.last_deltas = self.last_deltas + [delta]
