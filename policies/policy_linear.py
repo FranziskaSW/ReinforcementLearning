@@ -6,7 +6,7 @@ EPSILON = 0.05
 GAMMA = 0.5
 LEARNING_RATE = 0.05
 VICINITY = 2
-FEATURE_NUM = len(['FoodVicinity_1', 'FoodVicinity_2', 'FoodVicinity_3', 'FieldEmpty'])
+FEATURE_NUM = len(['Food1', 'Food2', 'Food3', 'FieldEmpty'])
 
 class Linear(bp.Policy):
     """
@@ -44,7 +44,7 @@ class Linear(bp.Policy):
                     self.log("Rewards in last 100 rounds which counts towards the score: " + str(
                         self.r_sum), 'VALUE')
                 else:
-                    self.log("Rewards in last 100 rounds: " + str(self.r_sum, self.weights.tolist()), 'VALUE')
+                    self.log("Rewards in last 100 rounds: " + str(self.r_sum), 'VALUE')
                 self.r_sum = 0
             else:
                 self.r_sum += reward
@@ -53,76 +53,24 @@ class Linear(bp.Policy):
             self.log("Something Went Wrong...", 'EXCEPTION')
             self.log(e, 'EXCEPTION')
 
-    def getVicinityMap(self, center, board):
-        board_size = board.shape
-        vicinity = self.vicinity
-
-        r, c = center
-
-        left = c - vicinity
-        right = c + vicinity + 1
-        top = r - vicinity
-        bottom = r + vicinity + 1
-
-        big_board = board
-
-        if left < 0:
-            left_patch = big_board[:, left]
-            left = 0
-            right = 2 * vicinity + 1
-            big_board = np.hstack([left_patch, big_board])
-
-        if right >= board_size[1]:
-            right_patch = big_board[:, :(right % board_size[1] + 1)]
-            big_board = np.hstack([big_board, right_patch])
-
-        if top < 0:
-            top_patch = big_board[top, :]
-            top = 0
-            bottom = 2 * vicinity + 1
-            big_board = np.vstack([top_patch, big_board])
-
-        if bottom >= board_size[0]:
-            bottom_patch = big_board[:(bottom % board_size[0])]
-            big_board = np.vstack([big_board, bottom_patch])
-
-        return big_board[top:bottom, left:right]
-
-    def getQValue(self, VicinityMap):
+    def getQValue(self, field):
         center = (self.vicinity, self.vicinity)
         weights = self.weights
         features = self.features
 
-        # look at the board in the relevant position:
-        # check which food is in vicinity after move
-        for feature_idx, food_value in enumerate([6, 7, 8]):
-
-            m = (VicinityMap == food_value)
-            food_positions = np.matrix(np.where(m)).T
-
-            if food_positions.shape == (0, 2):  # if no food of this kind was found
-                dist = 10
-            else:
-                distances = []
-                for food_pos in food_positions:
-                    x, y = food_pos.tolist()[0][0], food_pos.tolist()[0][1]
-                    dist = abs(center[0] - x) + abs(center[1] - y)
-                    distances.append(dist)
-                    dist = min(distances)
-            # features[feature_idx] = 10 - dist
-            features[feature_idx] = 1 / (dist + 0.001)
-
+        # which food is there
+        if field == 6: features[0] = 1
+        if field == 7: field[1] = 1
+        if field == 8: field[2] = 1
         # now check if next field is free
-        if VicinityMap[center] > 5 or VicinityMap[center] < 0:  # is free
-            free = 1
-        else:  # is onther snake
-            free = 0
-        features[3] = free
+        if field < 0: field[3] = 1
+
         # normalize features
-        f = features / np.linalg.norm(features)
+        f = features / np.linalg.norm(features) # is unnecessary because only one of the above can be true
 
         q_value = f.dot(weights)  # + bias
         return q_value, f
+
 
     def act(self, round, prev_state, prev_action, reward, new_state, too_slow):
 
@@ -132,8 +80,7 @@ class Linear(bp.Policy):
         if np.random.rand() < self.epsilon:
             action = np.random.choice(bp.Policy.ACTIONS)
             next_position = head_pos.move(bp.Policy.TURNS[direction][action])
-            VicinityMap = self.getVicinityMap(next_position, board)
-            q_value, features = self.getQValue(VicinityMap)
+            q_value, features = self.getQValue(board[next_position])
 
         else:
             res = {'features': [],
@@ -143,9 +90,7 @@ class Linear(bp.Policy):
                 # get a Position object of the position in the relevant direction from the head:
                 next_position = head_pos.move(bp.Policy.TURNS[direction][a])
 
-                VicinityMap = self.getVicinityMap(next_position, board)
-
-                q_value, features_a = self.getQValue(VicinityMap)  # getQValue(a, next_position, board, direction)
+                q_value, features_a = self.getQValue(board[next_position])  # getQValue(a, next_position, board, direction)
                 res['features'].append(features_a)
                 res['action'].append(a)
                 res['q_values'][dir_idx] = q_value
