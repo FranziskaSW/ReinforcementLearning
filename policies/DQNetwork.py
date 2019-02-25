@@ -24,9 +24,8 @@ class DQNetwork():
         self.model.add(Dropout(self.dropout_rate))
         self.model.add(Dense(self.num_actions, activation='softmax'))
 
-        self.model.compile(loss=keras.losses.categorical_crossentropy,
-                           optimizer='Adam',  # default learning rate = 0.01
-                           metrics=['accuracy'])
+        self.model.compile(loss='mean_squared_error',
+                           optimizer='Adam')  # default learning rate = 0.01
         self.act2idx = {'L': 0, 'R': 1, 'F': 2}
 
     def learn(self, batches):
@@ -35,8 +34,7 @@ class DQNetwork():
         for batch in batches:
             x.append(batch['s_t'])
             a_idx = self.act2idx[batch['a_t']]
-            # vec = np.zeros(3)
-            # vec[a_idx] = 1
+
             y_t = self.predict(batch['s_t'])[0]  # (1,3)
             q_update = (batch['r_t'] + self.gamma * np.max(self.predict(batch['s_tp1']))) # (1,1) for the action a_t
             y_t[a_idx] = q_update

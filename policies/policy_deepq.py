@@ -111,7 +111,7 @@ class MyPolicy(bp.Policy):
             map_before = self.getVicinityMap(board_prev, head_pos_prev, direction_prev)
             self.memory.append({'s_t': map_before, 'a_t': prev_action, 'r_t': reward, 's_tp1': map_new})
 
-        if round == 2000:
+        if round == 4999:
             losses = self.losses
             with open(cwd + "/losses.pickle", "wb") as f:
                 pickle.dump(losses, f)
