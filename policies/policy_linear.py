@@ -3,9 +3,9 @@ import numpy as np
 import operator
 
 EPSILON = 0.05
+EPSILON_RATE = 0.999
 GAMMA = 0.5
 LEARNING_RATE = 0.05
-VICINITY = 2
 FEATURE_NUM = len(['Food1', 'Food2', 'Food3', 'FieldEmpty'])
 
 class Linear(bp.Policy):
@@ -24,19 +24,28 @@ class Linear(bp.Policy):
 
     def init_run(self):
         self.r_sum = 0
-        weights = np.random.uniform(0, 1, FEATURE_NUM)
+        weights = np.matrix(np.random.uniform(0, 1, FEATURE_NUM))
         self.weights = weights / weights.sum()
         self.features = np.zeros(FEATURE_NUM)
-        # self.last_actions = []  #
+        self.last_actions = []  #
         self.last_qvalues = []
         self.last_deltas = []
+        self.last_features = []
 
     def learn(self, round, prev_state, prev_action, reward, new_state, too_slow):
 
-        last_features = self.last_features[-1]
-        delta = self.last_deltas[-1]
+        print(self.epsilon)
+        #last_features = self.last_features[-1]
+        #delta = self.last_deltas[-1]
 
-        self.weights = self.weights - self.learning_rate * (delta * last_features).mean(axis=0)
+        #last_features = self.last_features
+        feature_mat = np.matrix(self.last_features)
+        delta_mat = np.matrix(self.last_deltas)
+
+        self.weights = self.weights - self.learning_rate * (delta_mat.dot(feature_mat))/len(self.last_deltas)
+
+        self.last_features = []
+        self.last_deltas = []
 
         try:
             if round % 100 == 0:
@@ -54,22 +63,20 @@ class Linear(bp.Policy):
             self.log(e, 'EXCEPTION')
 
     def getQValue(self, field):
-        # center = (self.vicinity, self.vicinity)
         weights = self.weights
-        features = self.features
-
-        # which food is there
-        if field == 6: features[0] = 1
-        if field == 7: field[1] = 1
-        if field == 8: field[2] = 1
-        # now check if next field is free
-        if field < 0: field[3] = 1
-
-        # normalize features
-        f = features / np.linalg.norm(features) # is unnecessary because only one of the above can be true
-
-        q_value = f.dot(weights)  # + bias
-        return q_value, f
+        features = np.zeros(4)
+        if field >= 0 and field < 6:
+            return 0, features
+        else:
+            # which food is there
+            if field == 6: idx=0
+            if field == 7: idx=1
+            if field == 8: idx=2
+            # now check if next field is free
+            if field < 0: idx=3
+            features[idx] = 1
+            q_value = weights[0, idx]  # + bias
+            return q_value, features
 
 
     def act(self, round, prev_state, prev_action, reward, new_state, too_slow):
@@ -80,7 +87,8 @@ class Linear(bp.Policy):
         if np.random.rand() < self.epsilon:
             action = np.random.choice(bp.Policy.ACTIONS)
             next_position = head_pos.move(bp.Policy.TURNS[direction][action])
-            q_value, features = self.getQValue(board[next_position])
+            r, c = next_position
+            q_value, features = self.getQValue(board[r, c])
 
         else:
             res = {'features': [],
@@ -89,8 +97,9 @@ class Linear(bp.Policy):
             for dir_idx, a in enumerate(list(np.random.permutation(bp.Policy.ACTIONS))):
                 # get a Position object of the position in the relevant direction from the head:
                 next_position = head_pos.move(bp.Policy.TURNS[direction][a])
+                r, c = next_position
 
-                q_value, features_a = self.getQValue(board[next_position])  # getQValue(a, next_position, board, direction)
+                q_value, features_a = self.getQValue(board[r, c])  # getQValue(a, next_position, board, direction)
                 res['features'].append(features_a)
                 res['action'].append(a)
                 res['q_values'][dir_idx] = q_value
@@ -98,10 +107,14 @@ class Linear(bp.Policy):
             q_value, q_max_idx = np.max(res['q_values']), np.argmax(res['q_values'])
             features = res['features'][q_max_idx]
             action = res['action'][q_max_idx]
-
-        delta = self.last_qvalues[-1] - (reward + (self.gamma * q_value))
-        # self.last_actions = self.last_actions + [action]
-        self.last_qvalues = self.last_qvalues + [q_value]
-        self.last_features = self.last_features + [features]
-        self.last_deltas = self.last_deltas + [delta]
+        if round <= 1:
+            delta = 0
+        else:
+            # print(self.last_qvalues, self.last_actions, self.last_deltas)
+            delta = self.last_qvalues[-1] - (reward + (self.gamma * q_value))
+        self.last_actions.append(action)
+        self.last_qvalues.append(q_value)
+        self.last_features.append(features)
+        self.last_deltas.append(delta)
+        self.epsilon = self.epsilon * EPSILON_RATE
         return action
