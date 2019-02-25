@@ -35,15 +35,18 @@ class DQNetwork():
         for batch in batches:
             x.append(batch['s_t'])
             a_idx = self.act2idx[batch['a_t']]
-            vec = np.zeros(3)
-            vec[a_idx] = 1
-            y_t = (batch['r_t'] + self.gamma * np.max(self.predict(batch['s_tp1']))) * vec
+            # vec = np.zeros(3)
+            # vec[a_idx] = 1
+            y_t = self.predict(batch['s_t'])[0]  # (1,3)
+            q_update = (batch['r_t'] + self.gamma * np.max(self.predict(batch['s_tp1']))) # (1,1) for the action a_t
+            y_t[a_idx] = q_update
             y.append(y_t)
 
         x = np.array(x)[..., np.newaxis]
         y = np.array(y)
 
-        self.model.fit(x, y, batch_size=self.batch_size, nb_epoch=1)
+        h = self.model.fit(x, y, batch_size=self.batch_size, epochs=1)
+        return h.history['loss'][0]
 
     def predict(self, state):
         s = state[np.newaxis, ..., np.newaxis] # bring in right format

@@ -4,6 +4,11 @@ import numpy as np
 from keras.models import Sequential
 from keras.layers import *
 import keras
+import os
+import pickle
+
+global cwd
+cwd = os.getcwd()
 
 
 EPSILON = 0.3
@@ -31,14 +36,16 @@ class MyPolicy(bp.Policy):
         self.Q = DQN.DQNetwork(input_shape=(9, 9, 1), alpha=0.5, gamma=0.5,
                                dropout_rate=0.1, num_actions=NUM_ACTIONS, batch_size=self.batch_size)
         self.memory = []
+        self.losses = []
         self.act2idx = {'L': 0, 'R': 1, 'F': 2}
         self.idx2act = {0: 'L', 1: 'R', 2: 'F'}
 
     def learn(self, round, prev_state, prev_action, reward, new_state, too_slow):
 
         if round >= 50:
-           random_batches = np.random.choice(self.memory, self.batch_size)
-           self.Q.learn(random_batches)
+            random_batches = np.random.choice(self.memory, self.batch_size)
+            loss = self.Q.learn(random_batches)
+            self.losses.append(loss)
 
         try:
             if round % 100 == 0:
@@ -103,6 +110,11 @@ class MyPolicy(bp.Policy):
             head_pos_prev, direction_prev = head_prev
             map_before = self.getVicinityMap(board_prev, head_pos_prev, direction_prev)
             self.memory.append({'s_t': map_before, 'a_t': prev_action, 'r_t': reward, 's_tp1': map_new})
+
+        if round == 2000:
+            losses = self.losses
+            with open(cwd + "/losses.pickle", "wb") as f:
+                pickle.dump(losses, f)
 
         if np.random.rand() < self.epsilon:
             return np.random.choice(bp.Policy.ACTIONS)
