@@ -31,6 +31,8 @@ class MyPolicy(bp.Policy):
         self.Q = DQN.DQNetwork(input_shape=(9, 9, 1), alpha=0.5, gamma=0.5,
                                dropout_rate=0.1, num_actions=NUM_ACTIONS, batch_size=self.batch_size)
         self.memory = []
+        self.act2idx = {'L': 0, 'R': 1, 'F': 2}
+        self.idx2act = {0: 'L', 1: 'R', 2: 'F'}
 
     def learn(self, round, prev_state, prev_action, reward, new_state, too_slow):
 
@@ -52,7 +54,7 @@ class MyPolicy(bp.Policy):
             self.log("Something Went Wrong...", 'EXCEPTION')
             self.log(e, 'EXCEPTION')
 
-    def getVicinityMap(self, board, center):
+    def getVicinityMap(self, board, center, direction):
         vicinity = self.vicinity
 
         r, c = center
@@ -83,18 +85,23 @@ class MyPolicy(bp.Policy):
             bottom_patch = np.matrix(big_board[:(bottom % board.shape[0])])
             big_board = np.vstack([big_board, bottom_patch])
 
-        return big_board[top:bottom, left:right]
+        map = big_board[top:bottom, left:right]
+
+        if direction == 'N': return map
+        if direction == 'E': return np.rot90(map, k=1)
+        if direction == 'S': return np.rot90(map, k=2)
+        if direction == 'W': return np.rot90(map, k=-1)
 
     def act(self, round, prev_state, prev_action, reward, new_state, too_slow):
 
         board, head = new_state
         head_pos, direction = head
-        map_new = self.getVicinityMap(board, head_pos)
+        map_new = self.getVicinityMap(board, head_pos, direction)
 
         if round >=2:  # update to memory from previous round (prev_state)
             board_prev, head_prev = prev_state
             head_pos_prev, direction_prev = head_prev
-            map_before = self.getVicinityMap(board_prev, head_pos_prev)
+            map_before = self.getVicinityMap(board_prev, head_pos_prev, direction_prev)
             self.memory.append({'s_t': map_before, 'a_t': prev_action, 'r_t': reward, 's_tp1': map_new})
 
         if np.random.rand() < self.epsilon:
@@ -103,4 +110,4 @@ class MyPolicy(bp.Policy):
         else:
             q_values = self.Q.predict(map_new)
             idx = np.argmax(q_values)
-            return bp.Policy.ACTIONS[idx]  # TODO: right now assume L, R, F as it is defined
+            return self.idx2act[idx]  # TODO: right now assume L, R, F as it is defined
