@@ -5,21 +5,24 @@ from keras.models import Sequential
 from keras.layers import *
 import keras
 import os
-import pickle
+import pickle # TODO REMOVE
 
 global cwd
 cwd = os.getcwd()
 
 
 EPSILON = 0.3
-ALPHA = 0.5
+EPSILON_RATE = 0.999
 GAMMA = 0.5
-DROPOUT_RATE = 0.1
+DROPOUT_RATE = 0.2
+LEARNING_RATE = 0.0001
 
 NUM_ACTIONS = 3  # (L, R, F)
 BATCH_SIZE = 32
-VICINITY = 4
-INPUT_SHAPE = (VICINITY*2+1, VICINITY*2+1, 1)
+VICINITY = 7
+FEATURE_NUM = (VICINITY*2+1)**2
+INPUT_SHAPE = (FEATURE_NUM*NUM_ACTIONS, ) # ((81*3), ))  (1, NUM_ACTIONS*FEATURE_NUM)
+MEMORY_LENGTH = BATCH_SIZE*20
 
 class MyPolicy(bp.Policy):
     """
@@ -29,23 +32,37 @@ class MyPolicy(bp.Policy):
         policy_args['epsilon'] = float(policy_args['epsilon']) if 'epsilon' in policy_args else EPSILON
         policy_args['batch_size'] = float(policy_args['batch_size']) if 'batch_size' in policy_args else BATCH_SIZE
         policy_args['vicinity'] = float(policy_args['vicinity']) if 'vicinity' in policy_args else VICINITY
+        policy_args['learning_rate'] = float(policy_args['learning_rate']) if 'learning_rate' in policy_args else LEARNING_RATE
         return policy_args
 
     def init_run(self):
         self.r_sum = 0
-        self.Q = DQN.DQNetwork(input_shape=(9, 9, 1), alpha=0.5, gamma=0.5,
-                               dropout_rate=0.1, num_actions=NUM_ACTIONS, batch_size=self.batch_size)
+        self.Q = DQN.DQNetwork(input_shape=INPUT_SHAPE, alpha=0.5, gamma=0.8,
+                               dropout_rate=0.1, num_actions=NUM_ACTIONS, batch_size=self.batch_size,
+                               learning_rate=self.learning_rate)
         self.memory = []
-        self.losses = []
+        self.loss = []
         self.act2idx = {'L': 0, 'R': 1, 'F': 2}
         self.idx2act = {0: 'L', 1: 'R', 2: 'F'}
+        self.memory_length = MEMORY_LENGTH
+
+    def put_stats(self):  # TODO remove after testing
+        pickle.dump(self.loss, open(self.dir_name + '/last_game_loss.pkl', 'wb'))
+        pickle.dump(self.test(), open(self.dir_name + '/last_test_loss.pkl', 'wb'))
+    #
+    # def test(self):  # TODO REMOVE AFTER TESTING
+    #     gt = self.Q.(self.replay_next, self.replay_reward, self.replay_idx)
+    #     loss = self.model.train_on_batch(self.replay_prev[:self.replay_idx], gt)
+    #     return loss
+
 
     def learn(self, round, prev_state, prev_action, reward, new_state, too_slow):
 
-        if round >= 50:
+        if round >= self.batch_size:
             random_batches = np.random.choice(self.memory, self.batch_size)
             loss = self.Q.learn(random_batches)
-            self.losses.append(loss)
+            self.loss.append(loss)
+        self.epsilon = self.epsilon * EPSILON_RATE
 
         try:
             if round % 100 == 0:
@@ -99,34 +116,52 @@ class MyPolicy(bp.Policy):
         if direction == 'S': return np.rot90(map, k=2)
         if direction == 'W': return np.rot90(map, k=-1)
 
+    def getFeatures(self, board, head):
+        features = np.zeros([3, FEATURE_NUM])
+        head_pos, direction = head
+        for a in self.act2idx:
+            moving_dir = bp.Policy.TURNS[direction][a]
+            next_position = head_pos.move(moving_dir)
+            map_after = self.getVicinityMap(board, next_position, moving_dir)  # map around head and turned so that snakes looks to the top
+            features[self.act2idx[a]] = map_after.flatten()
+        # print('f1: ', features.shape)
+        features = features.flatten()
+        # features = features/features.sum()
+        # print('flatten: ', features.shape)
+        return features
+
+
     def act(self, round, prev_state, prev_action, reward, new_state, too_slow):
 
         board, head = new_state
-        head_pos, direction = head
-        map_new = self.getVicinityMap(board, head_pos, direction)
+        new_features = self.getFeatures(board, head)
 
         if round >=2:  # update to memory from previous round (prev_state)
             board_prev, head_prev = prev_state
-            head_pos_prev, direction_prev = head_prev
-            map_before = self.getVicinityMap(board_prev, head_pos_prev, direction_prev)
-            self.memory.append({'s_t': map_before, 'a_t': prev_action, 'r_t': reward, 's_tp1': map_new})
+            prev_features = self.getFeatures(board_prev, head_prev)
+            memory_update = {'s_t': prev_features, 'a_t': prev_action, 'r_t': reward, 's_tp1': new_features}
 
-        if round == 3999:
-            losses = self.losses
+            if len(self.memory) < self.memory_length:
+                self.memory.append(memory_update)
+            else:
+                self.memory[round % self.memory_length] = memory_update
+
+        if round == 4999:
+            losses = self.loss
             with open(cwd + "/losses.pickle", "wb") as f:
                 pickle.dump(losses, f)
 
+        # act in new round, decide for new_state
         if np.random.rand() < self.epsilon:
-            return np.random.choice(bp.Policy.ACTIONS)
+            action = np.random.choice(bp.Policy.ACTIONS)
 
         else:
-            q_values = []
-            for a in self.act2idx:
-                moving_dir = bp.Policy.TURNS[direction][a]
-                next_position = head_pos.move(moving_dir)
+            # print(new_features.shape)
+            q_values = self.Q.predict(new_features)
+            # print(q_values)
+            a_idx = np.argmax(q_values)
+            # print(a_idx)
+            # print('chose action: ' , self.idx2act[a_idx])
+            action = self.idx2act[a_idx]
 
-                map_after = self.getVicinityMap(board, next_position, moving_dir)
-                q_value = self.Q.predict(map_after)
-                q_values.append(q_value)
-            idx = np.argmax(q_values)
-            return self.idx2act[idx]
+        return action
