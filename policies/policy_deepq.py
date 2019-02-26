@@ -111,7 +111,7 @@ class MyPolicy(bp.Policy):
             map_before = self.getVicinityMap(board_prev, head_pos_prev, direction_prev)
             self.memory.append({'s_t': map_before, 'a_t': prev_action, 'r_t': reward, 's_tp1': map_new})
 
-        if round == 4999:
+        if round == 3999:
             losses = self.losses
             with open(cwd + "/losses.pickle", "wb") as f:
                 pickle.dump(losses, f)
@@ -120,6 +120,13 @@ class MyPolicy(bp.Policy):
             return np.random.choice(bp.Policy.ACTIONS)
 
         else:
-            q_values = self.Q.predict(map_new)
+            q_values = []
+            for a in self.act2idx:
+                moving_dir = bp.Policy.TURNS[direction][a]
+                next_position = head_pos.move(moving_dir)
+
+                map_after = self.getVicinityMap(board, next_position, moving_dir)
+                q_value = self.Q.predict(map_after)
+                q_values.append(q_value)
             idx = np.argmax(q_values)
-            return self.idx2act[idx]  # TODO: right now assume L, R, F as it is defined
+            return self.idx2act[idx]

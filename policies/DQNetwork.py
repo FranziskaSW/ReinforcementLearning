@@ -22,7 +22,7 @@ class DQNetwork():
         self.model.add(Flatten())
         self.model.add(Dense(128, activation='relu'))
         self.model.add(Dropout(self.dropout_rate))
-        self.model.add(Dense(self.num_actions, activation='softmax'))
+        self.model.add(Dense(1, activation='softmax'))
 
         self.model.compile(loss='mean_squared_error',
                            optimizer='Adam')  # default learning rate = 0.01
@@ -34,10 +34,10 @@ class DQNetwork():
         for batch in batches:
             x.append(batch['s_t'])
             a_idx = self.act2idx[batch['a_t']]
+            q_hat_vals = []
+            #.... aber jetzt habe ich die vicinity map vom nächsten state nicht, weil ich nur die 9x9 karte gespeichert habe.. ok morgen weiter
 
-            y_t = self.predict(batch['s_t'])[0]  # (1,3)
-            q_update = (batch['r_t'] + self.gamma * np.max(self.predict(batch['s_tp1']))) # (1,1) for the action a_t
-            y_t[a_idx] = q_update
+            y_t = (batch['r_t'] + self.gamma * np.max(self.predict(batch['s_tp1']))) # here need to do loop as well, which one of the 3 actions gives best q-value.
             y.append(y_t)
 
         x = np.array(x)[..., np.newaxis]
