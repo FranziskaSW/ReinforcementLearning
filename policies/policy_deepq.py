@@ -21,7 +21,7 @@ NUM_ACTIONS = 3  # (L, R, F)
 # BATCH_SIZE = 15
 VICINITY = 8
 
-FEATURE_NUM = 10*(VICINITY*2+1)+1 #(VICINITY*2+1)**2
+FEATURE_NUM = 10*(VICINITY*2+2)  # 10 symbols, Vicinity*2: max distance, +1 if zero distance, +1 for amount of symbols
 INPUT_SHAPE = (FEATURE_NUM, )
 MEMORY_LENGTH = 2000 #BATCH_SIZE*20
 BATCH_SIZE = 32
@@ -142,24 +142,24 @@ class MyPolicy(bp.Policy):
 
         for field_value in range(-1, 10):
             feature_idx = int(field_value) + 1
+            # how many elements do we have
+            features[feature_idx] = (board == field_value).sum()
+
             m = (map_v == field_value)
             field_positions = np.matrix(np.where(m)).T
 
-            if field_positions.shape == (0, 2):  # this value is not in our vicinity
-                pass
-            else:
-                distances = []
-                for field_pos in field_positions:
-                    x, y = field_pos.tolist()[0][0], field_pos.tolist()[0][1]
-                    dist = abs(center[0] - x) + abs(center[1] - y)
-                    distances.append(dist)
-                # fill feautre vector
-                for val in range(0, max_distance + 1):
-                    if val in distances:
-                        idx = feature_idx + val * 10
-                        features[idx] = 1
-        # how long is our snake? self.id
-        features[-1] = (board==self.id).sum ()
+            distances = []
+            for field_pos in field_positions:
+                x, y = field_pos.tolist()[0][0], field_pos.tolist()[0][1]
+                dist = abs(center[0] - x) + abs(center[1] - y)
+                distances.append(dist)
+            # fill feautre vector
+            for val in range(0, max_distance + 1):
+                if val in distances:
+                    idx_area = val + 1
+                    idx = feature_idx + idx_area * 10
+                    features[idx] = 1
+
         return features
 
     # TODO: add features
