@@ -10,22 +10,22 @@ source /cs/labs/shais/dsgissin/apml_snake/bin/activate.csh
 module load tensorflow
 
 python3 /cs/usr/franziska/ReinforcementLearning/TestSnake.py \
-    -D 7000 -s 1000 -r 0 -plt 0.01 -pat 0.005 -pit 60 \
+    -D 7000 -s 1000 -r 0 -plt 0.2 -pat 0.05 -pit 60 \
     -rt match_01.pickle \
     -ds _Q_3 -tp epsilon -ss 3
 
 python3 /cs/usr/franziska//ReinforcementLearning/TestSnake.py \
-    -D 7000 -s 1000 -r 0 -plt 0.01 -pat 0.005 -pit 60 \
+    -D 7000 -s 1000 -r 0 -plt 0.2 -pat 0.05 -pit 60 \
     -rt match_01.pickle \
     -ds _Q_3 -tp learning_rate -ss 3
 
 python3 /cs/usr/franziska//ReinforcementLearning/TestSnake.py \
-    -D 7000 -s 1000 -r 0 -plt 0.01 -pat 0.005 -pit 60 \
+    -D 7000 -s 1000 -r 0 -plt 0.2 -pat 0.05 -pit 60 \
     -rt match_01.pickle \
     -ds _Q_3 -tp gamma -ss 3
 
 
 python3 /cs/usr/franziska//ReinforcementLearning/TestSnake.py \
-    -D 7000 -s 1000 -r 0 -plt 0.01 -pat 0.005 -pit 60 \
+    -D 7000 -s 1000 -r 0 -plt 0.2 -pat 0.05 -pit 60 \
     -rt match_01.pickle \
     -ds _Q_3 -tp batch_size -ss 3
