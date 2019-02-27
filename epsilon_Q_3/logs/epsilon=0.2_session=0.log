@@ -1,112 +1,903 @@
-0::0:0:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
-0::0:0:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
-0::0:0:18	0	VALUE	Rewards in last 100 rounds: 0
-0::0:0:18	1	VALUE	Rewards in last 100 rounds: 0
-0::0:0:18	3	VALUE	Rewards in last 100 rounds: 0
-0::0:0:18	2	VALUE	Rewards in last 100 rounds: 0
-0::0:0:19	4	VALUE	Rewards in last 100 rounds: -10
-0::0:0:33	2	VALUE	Rewards in last 100 rounds: -5
-0::0:0:33	1	VALUE	Rewards in last 100 rounds: 0
-0::0:0:33	0	VALUE	Rewards in last 100 rounds: 0
-0::0:0:33	3	VALUE	Rewards in last 100 rounds: 0
-0::0:0:33	4	VALUE	Rewards in last 100 rounds: -11
-0::0:0:47	1	VALUE	Rewards in last 100 rounds: 0
-0::0:0:47	3	VALUE	Rewards in last 100 rounds: 2
-0::0:0:47	2	VALUE	Rewards in last 100 rounds: 0
-0::0:0:47	0	VALUE	Rewards in last 100 rounds: 0
-0::0:0:47	4	VALUE	Rewards in last 100 rounds: -3
-0::0:1:2	3	VALUE	Rewards in last 100 rounds: 5
-0::0:1:2	2	VALUE	Rewards in last 100 rounds: -1
-0::0:1:2	1	VALUE	Rewards in last 100 rounds: 1
-0::0:1:2	0	VALUE	Rewards in last 100 rounds: 7
-0::0:1:2	4	VALUE	Rewards in last 100 rounds: -10
-0::0:1:16	3	VALUE	Rewards in last 100 rounds: 2
-0::0:1:16	1	VALUE	Rewards in last 100 rounds: -3
-0::0:1:16	0	VALUE	Rewards in last 100 rounds: 2
-0::0:1:16	2	VALUE	Rewards in last 100 rounds: -13
-0::0:1:16	4	VALUE	Rewards in last 100 rounds: -11
-0::0:1:30	1	VALUE	Rewards in last 100 rounds: 5
-0::0:1:30	0	VALUE	Rewards in last 100 rounds: 2
-0::0:1:30	2	VALUE	Rewards in last 100 rounds: 7
-0::0:1:30	3	VALUE	Rewards in last 100 rounds: 2
-0::0:1:30	4	VALUE	Rewards in last 100 rounds: -5
-0::0:1:45	1	VALUE	Rewards in last 100 rounds: -3
-0::0:1:45	0	VALUE	Rewards in last 100 rounds: -1
-0::0:1:45	2	VALUE	Rewards in last 100 rounds: -5
-0::0:1:45	3	VALUE	Rewards in last 100 rounds: 0
-0::0:1:45	4	VALUE	Rewards in last 100 rounds: 2
-0::0:1:59	3	VALUE	Rewards in last 100 rounds: -5
-0::0:1:59	1	VALUE	Rewards in last 100 rounds: -1
-0::0:1:59	0	VALUE	Rewards in last 100 rounds: 3
-0::0:1:59	2	VALUE	Rewards in last 100 rounds: 7
-0::0:1:59	4	VALUE	Rewards in last 100 rounds: -11
-0::0:2:13	2	VALUE	Rewards in last 100 rounds: 1
-0::0:2:13	1	VALUE	Rewards in last 100 rounds: 10
-0::0:2:13	0	VALUE	Rewards in last 100 rounds: 7
-0::0:2:13	3	VALUE	Rewards in last 100 rounds: 0
-0::0:2:13	4	VALUE	Rewards in last 100 rounds: -10
-0::0:2:28	2	VALUE	Rewards in last 100 rounds: 5
-0::0:2:28	1	VALUE	Rewards in last 100 rounds: 0
-0::0:2:28	3	VALUE	Rewards in last 100 rounds: 3
-0::0:2:28	0	VALUE	Rewards in last 100 rounds: -3
-0::0:2:28	4	VALUE	Rewards in last 100 rounds: 9
-0::0:2:42	3	VALUE	Rewards in last 100 rounds: -7
-0::0:2:42	1	VALUE	Rewards in last 100 rounds: -1
-0::0:2:42	0	VALUE	Rewards in last 100 rounds: 2
-0::0:2:42	2	VALUE	Rewards in last 100 rounds: 5
-0::0:2:42	4	VALUE	Rewards in last 100 rounds: 0
-0::0:2:56	0	VALUE	Rewards in last 100 rounds: 11
-0::0:2:56	2	VALUE	Rewards in last 100 rounds: -1
-0::0:2:56	3	VALUE	Rewards in last 100 rounds: 1
-0::0:2:56	1	VALUE	Rewards in last 100 rounds: -1
-0::0:2:57	4	VALUE	Rewards in last 100 rounds: -4
-0::0:3:11	0	VALUE	Rewards in last 100 rounds: 5
-0::0:3:11	1	VALUE	Rewards in last 100 rounds: -6
-0::0:3:11	3	VALUE	Rewards in last 100 rounds: 2
-0::0:3:11	2	VALUE	Rewards in last 100 rounds: 7
-0::0:3:11	4	VALUE	Rewards in last 100 rounds: 6
-0::0:3:25	3	VALUE	Rewards in last 100 rounds: 5
-0::0:3:25	2	VALUE	Rewards in last 100 rounds: 5
-0::0:3:25	0	VALUE	Rewards in last 100 rounds: 4
-0::0:3:25	1	VALUE	Rewards in last 100 rounds: -1
-0::0:3:25	4	VALUE	Rewards in last 100 rounds: 5
-0::0:3:40	0	VALUE	Rewards in last 100 rounds: -8
-0::0:3:40	2	VALUE	Rewards in last 100 rounds: -1
-0::0:3:40	1	VALUE	Rewards in last 100 rounds: 0
-0::0:3:40	3	VALUE	Rewards in last 100 rounds: -1
-0::0:3:40	4	VALUE	Rewards in last 100 rounds: -3
-0::0:3:54	2	VALUE	Rewards in last 100 rounds: 4
-0::0:3:54	1	VALUE	Rewards in last 100 rounds: 5
-0::0:3:54	3	VALUE	Rewards in last 100 rounds: 7
-0::0:3:54	0	VALUE	Rewards in last 100 rounds: -1
-0::0:3:54	4	VALUE	Rewards in last 100 rounds: -10
-0::0:4:8	1	VALUE	Rewards in last 100 rounds: 2
-0::0:4:8	0	VALUE	Rewards in last 100 rounds: -1
-0::0:4:8	3	VALUE	Rewards in last 100 rounds: 3
-0::0:4:8	2	VALUE	Rewards in last 100 rounds: 0
-0::0:4:8	4	VALUE	Rewards in last 100 rounds: 0
-0::0:4:23	3	VALUE	Rewards in last 100 rounds: 4
-0::0:4:23	2	VALUE	Rewards in last 100 rounds: -4
-0::0:4:23	0	VALUE	Rewards in last 100 rounds: 5
-0::0:4:23	1	VALUE	Rewards in last 100 rounds: 10
-0::0:4:23	4	VALUE	Rewards in last 100 rounds: -15
-0::0:4:37	3	VALUE	Rewards in last 100 rounds: 10
-0::0:4:37	2	VALUE	Rewards in last 100 rounds: 9
-0::0:4:37	0	VALUE	Rewards in last 100 rounds: 5
-0::0:4:37	1	VALUE	Rewards in last 100 rounds: 0
-0::0:4:37	4	VALUE	Rewards in last 100 rounds: 4
-0::0:4:51	0	VALUE	Rewards in last 100 rounds: 0
-0::0:4:51	1	VALUE	Rewards in last 100 rounds: 3
-0::0:4:51	3	VALUE	Rewards in last 100 rounds: 9
-0::0:4:51	2	VALUE	Rewards in last 100 rounds: -2
-0::0:4:51	4	VALUE	Rewards in last 100 rounds: -5
-0::0:5:6	3	VALUE	Rewards in last 100 rounds: -6
-0::0:5:6	0	VALUE	Rewards in last 100 rounds: 0
-0::0:5:6	1	VALUE	Rewards in last 100 rounds: 0
-0::0:5:6	2	VALUE	Rewards in last 100 rounds: 5
-0::0:5:6	4	VALUE	Rewards in last 100 rounds: 5
-0::0:5:20	1	VALUE	Rewards in last 100 rounds: -3
-0::0:5:20	3	VALUE	Rewards in last 100 rounds: -5
-0::0:5:20	0	VALUE	Rewards in last 100 rounds: -1
-0::0:5:20	2	VALUE	Rewards in last 100 rounds: 4
-0::0:5:20	4	VALUE	Rewards in last 100 rounds: -16
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #5 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #6 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #7 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #8 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #9 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #10 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #11 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #5 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #6 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #7 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #8 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #9 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #10 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #11 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #12 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #13 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #14 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #15 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #16 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #17 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #18 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #19 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #20 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #21 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #22 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #23 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #24 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #25 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #26 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #27 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #28 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #29 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #30 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #31 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #32 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #33 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #34 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #35 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #36 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #37 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #38 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #39 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #40 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #41 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #42 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #43 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #5 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #6 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #7 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #8 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #9 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #10 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #11 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #12 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #13 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #14 in a row!
+0::0:1:0	2	VALUE	Rewards in last 100 rounds: 0
+0::0:1:0	1	VALUE	Rewards in last 100 rounds: 0
+0::0:1:0	0	VALUE	Rewards in last 100 rounds: -5
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #15 in a row!
+0::0:1:0	3	VALUE	Rewards in last 100 rounds: 0
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #16 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #17 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #18 in a row!
+0::0:1:0	4	VALUE	Rewards in last 100 rounds: 5
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #19 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #20 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #21 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #22 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #23 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #24 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #25 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #26 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #27 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #28 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #29 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #30 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #31 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #32 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #5 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #6 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #7 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #8 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #9 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #10 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #11 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #12 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #13 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #14 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #15 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #16 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #17 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #18 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #19 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #20 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #21 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #22 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #23 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #24 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #25 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #26 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #27 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #28 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #29 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #30 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #31 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #32 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #33 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #34 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #5 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #6 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #7 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #5 in a row!
+0::0:1:1	1	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:1	2	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #6 in a row!
+0::0:1:1	3	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:1	1	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:1	2	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:1	3	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #7 in a row!
+0::0:1:1	3	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:1	2	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:1	1	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #8 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #9 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #10 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #11 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:1	3	VALUE	Rewards in last 100 rounds: 0
+0::0:1:1	2	VALUE	Rewards in last 100 rounds: 0
+0::0:1:1	1	VALUE	Rewards in last 100 rounds: 0
+0::0:1:1	0	VALUE	Rewards in last 100 rounds: 2
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:1	4	VALUE	Rewards in last 100 rounds: -5
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #5 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #6 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #7 in a row!
+0::0:1:1	4	ERROR	No Response: player took too long to respond with action. This is No Response #8 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #5 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #6 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #7 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #8 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #9 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #10 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #11 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #12 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #13 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #14 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #5 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #6 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #7 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #8 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #9 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #5 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #6 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #7 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #8 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #5 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #6 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #7 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #8 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:2	3	VALUE	Rewards in last 100 rounds: 0
+0::0:1:2	1	VALUE	Rewards in last 100 rounds: -1
+0::0:1:2	2	VALUE	Rewards in last 100 rounds: -3
+0::0:1:2	0	VALUE	Rewards in last 100 rounds: 0
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:2	4	VALUE	Rewards in last 100 rounds: 5
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #5 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #6 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #7 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #8 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #5 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #6 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #7 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #8 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #5 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #6 in a row!
+0::0:1:2	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:3	0	VALUE	Rewards in last 100 rounds: 2
+0::0:1:3	1	VALUE	Rewards in last 100 rounds: 4
+0::0:1:3	2	VALUE	Rewards in last 100 rounds: -6
+0::0:1:3	3	VALUE	Rewards in last 100 rounds: 0
+0::0:1:3	4	VALUE	Rewards in last 100 rounds: -5
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #5 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #6 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #7 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #8 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #9 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #10 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #11 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #12 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #13 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:4	2	VALUE	Rewards in last 100 rounds: 0
+0::0:1:4	3	VALUE	Rewards in last 100 rounds: -3
+0::0:1:4	0	VALUE	Rewards in last 100 rounds: 2
+0::0:1:4	1	VALUE	Rewards in last 100 rounds: 0
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #5 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #6 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #7 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #8 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #9 in a row!
+0::0:1:4	4	VALUE	Rewards in last 100 rounds: 0
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #10 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #11 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #12 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #13 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #14 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #15 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #16 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #17 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #18 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #19 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #20 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #21 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #22 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #23 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #24 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #25 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #26 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #27 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #28 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #29 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #30 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #31 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #5 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #6 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #7 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:4	4	ERROR	No Response: player took too long to respond with action. This is No Response #5 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #6 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #7 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #8 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:5	1	VALUE	Rewards in last 100 rounds: 0
+0::0:1:5	2	VALUE	Rewards in last 100 rounds: -2
+0::0:1:5	0	VALUE	Rewards in last 100 rounds: 5
+0::0:1:5	3	VALUE	Rewards in last 100 rounds: -1
+0::0:1:5	4	VALUE	Rewards in last 100 rounds: 6
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #5 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #6 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #7 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #8 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #9 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #5 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #6 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #5 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #6 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #7 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #8 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:5	2	VALUE	Rewards in last 100 rounds: 7
+0::0:1:5	0	VALUE	Rewards in last 100 rounds: 0
+0::0:1:5	3	VALUE	Rewards in last 100 rounds: 0
+0::0:1:5	1	VALUE	Rewards in last 100 rounds: 0
+0::0:1:5	4	VALUE	Rewards in last 100 rounds: 7
+0::0:1:6	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:6	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:6	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:6	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:6	4	ERROR	No Response: player took too long to respond with action. This is No Response #5 in a row!
+0::0:1:6	4	ERROR	No Response: player took too long to respond with action. This is No Response #6 in a row!
+0::0:1:6	4	ERROR	No Response: player took too long to respond with action. This is No Response #7 in a row!
+0::0:1:6	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:6	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:6	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:6	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:6	0	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:6	4	ERROR	No Response: player took too long to respond with action. This is No Response #5 in a row!
+0::0:1:6	4	ERROR	No Response: player took too long to respond with action. This is No Response #6 in a row!
+0::0:1:6	0	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:6	4	ERROR	No Response: player took too long to respond with action. This is No Response #7 in a row!
+0::0:1:6	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:6	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:6	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:6	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:6	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:6	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:6	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:6	4	ERROR	No Response: player took too long to respond with action. This is No Response #5 in a row!
+0::0:1:6	4	ERROR	No Response: player took too long to respond with action. This is No Response #6 in a row!
+0::0:1:6	4	ERROR	No Response: player took too long to respond with action. This is No Response #7 in a row!
+0::0:1:6	4	ERROR	No Response: player took too long to respond with action. This is No Response #8 in a row!
+0::0:1:6	4	ERROR	No Response: player took too long to respond with action. This is No Response #9 in a row!
+0::0:1:6	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:6	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:6	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:6	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:6	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:6	3	VALUE	Rewards in last 100 rounds: 4
+0::0:1:6	0	VALUE	Rewards in last 100 rounds: 4
+0::0:1:6	2	VALUE	Rewards in last 100 rounds: -10
+0::0:1:6	1	VALUE	Rewards in last 100 rounds: 0
+0::0:1:6	4	VALUE	Rewards in last 100 rounds: 7
+0::0:1:6	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:6	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:6	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:6	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:6	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #5 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #6 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #7 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #8 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #9 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #10 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #11 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #12 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #13 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:7	2	VALUE	Rewards in last 100 rounds: 0
+0::0:1:7	3	VALUE	Rewards in last 100 rounds: -3
+0::0:1:7	1	VALUE	Rewards in last 100 rounds: 5
+0::0:1:7	0	VALUE	Rewards in last 100 rounds: 6
+0::0:1:7	4	VALUE	Rewards in last 100 rounds: -5
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #5 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #6 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #7 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #8 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #9 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #10 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #11 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #12 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #13 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #14 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #5 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #6 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #7 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #8 in a row!
+0::0:1:8	1	VALUE	Rewards in last 100 rounds: 4
+0::0:1:8	0	VALUE	Rewards in last 100 rounds: 1
+0::0:1:8	2	VALUE	Rewards in last 100 rounds: -1
+0::0:1:8	3	VALUE	Rewards in last 100 rounds: -1
+0::0:1:8	4	VALUE	Rewards in last 100 rounds: 4
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #5 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #6 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #7 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #8 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #5 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #6 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #7 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #5 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #6 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #7 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #8 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #9 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #10 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #11 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #12 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #13 in a row!
+0::0:1:9	3	VALUE	Rewards in last 100 rounds: -1
+0::0:1:9	0	VALUE	Rewards in last 100 rounds: 0
+0::0:1:9	2	VALUE	Rewards in last 100 rounds: 2
+0::0:1:9	1	VALUE	Rewards in last 100 rounds: 10
+0::0:1:9	4	VALUE	Rewards in last 100 rounds: 10
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #5 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #6 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #7 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #8 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #9 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #5 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #6 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #7 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #8 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:9	4	ERROR	No Response: player took too long to respond with action. This is No Response #5 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #6 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #7 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #8 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #9 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #10 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #11 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #12 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #13 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #14 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:10	0	VALUE	Rewards in last 100 rounds: 7
+0::0:1:10	1	VALUE	Rewards in last 100 rounds: 5
+0::0:1:10	3	VALUE	Rewards in last 100 rounds: 0
+0::0:1:10	2	VALUE	Rewards in last 100 rounds: 3
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:10	4	VALUE	Rewards in last 100 rounds: 14
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #5 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #6 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #7 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #8 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #5 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #6 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #5 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #6 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #7 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #8 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #9 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #10 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #11 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #12 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #13 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #5 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #6 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #7 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #8 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #5 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #6 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #7 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #8 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #9 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #10 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #11 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #12 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #13 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #14 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #15 in a row!
+0::0:1:10	4	ERROR	No Response: player took too long to respond with action. This is No Response #16 in a row!
+0::0:1:11	4	ERROR	No Response: player took too long to respond with action. This is No Response #17 in a row!
+0::0:1:11	4	ERROR	No Response: player took too long to respond with action. This is No Response #18 in a row!
+0::0:1:11	4	ERROR	No Response: player took too long to respond with action. This is No Response #19 in a row!
+0::0:1:11	3	VALUE	Rewards in last 100 rounds: 5
+0::0:1:11	2	VALUE	Rewards in last 100 rounds: -5
+0::0:1:11	1	VALUE	Rewards in last 100 rounds: -7
+0::0:1:11	0	VALUE	Rewards in last 100 rounds: 5
+0::0:1:11	4	ERROR	No Response: player took too long to respond with action. This is No Response #20 in a row!
+0::0:1:11	4	ERROR	No Response: player took too long to respond with action. This is No Response #21 in a row!
+0::0:1:11	4	VALUE	Rewards in last 100 rounds: -1
+0::0:1:11	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:11	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:11	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:11	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:11	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:11	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:11	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:11	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:11	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:11	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:11	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:11	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:11	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:11	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:11	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:11	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:11	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:11	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:11	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:11	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:11	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:11	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:11	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:11	4	ERROR	No Response: player took too long to respond with action. This is No Response #5 in a row!
+0::0:1:11	4	ERROR	No Response: player took too long to respond with action. This is No Response #6 in a row!
+0::0:1:11	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:11	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:11	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:11	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:11	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:11	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:11	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:11	4	ERROR	No Response: player took too long to respond with action. This is No Response #5 in a row!
+0::0:1:11	4	ERROR	No Response: player took too long to respond with action. This is No Response #6 in a row!
+0::0:1:11	1	VALUE	Rewards in last 100 rounds: 1
+0::0:1:11	2	VALUE	Rewards in last 100 rounds: -1
+0::0:1:11	0	VALUE	Rewards in last 100 rounds: 0
+0::0:1:11	3	VALUE	Rewards in last 100 rounds: -9
+0::0:1:11	4	VALUE	Rewards in last 100 rounds: -6
+0::0:1:12	1	VALUE	Rewards in last 100 rounds: -5
+0::0:1:12	3	VALUE	Rewards in last 100 rounds: 0
+0::0:1:12	2	VALUE	Rewards in last 100 rounds: 1
+0::0:1:12	0	VALUE	Rewards in last 100 rounds: 2
+0::0:1:12	4	VALUE	Rewards in last 100 rounds: 10
+0::0:1:13	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:13	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:13	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:13	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:13	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
+0::0:1:13	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
+0::0:1:13	4	ERROR	No Response: player took too long to respond with action. This is No Response #5 in a row!
+0::0:1:13	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:13	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:13	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
