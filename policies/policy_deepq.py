@@ -19,10 +19,11 @@ LEARNING_RATE = 0.001
 
 NUM_ACTIONS = 3  # (L, R, F)
 # BATCH_SIZE = 15
-VICINITY = 8
+VICINITY = 4
+MAX_DISTANCE = 3
 
-FEATURE_NUM = 11 # *(VICINITY*2+3)  # 10 symbols, Vicinity*2: max distance, +1 if zero distance, +1 for amount of symbols, +1 for what is on next field (like linear)
-INPUT_SHAPE = (FEATURE_NUM, )
+#FEATURE_NUM = 11 # *(VICINITY*2+3)  # 10 symbols, Vicinity*2: max distance, +1 if zero distance, +1 for amount of symbols, +1 for what is on next field (like linear)
+#INPUT_SHAPE = (FEATURE_NUM, )
 MEMORY_LENGTH = 2000 #BATCH_SIZE*20
 BATCH_SIZE = 32
 GAMMA = 0.5
@@ -40,16 +41,18 @@ class MyPolicy(bp.Policy):
 
     def init_run(self):
         self.r_sum = 0
-        self.feature_num = FEATURE_NUM
-        self.Q = DQN.DQNetwork(input_shape=INPUT_SHAPE, alpha=0.5, gamma=0.8,
+        self.vicinity = VICINITY
+        self.max_distance = MAX_DISTANCE
+        self.feature_num = (self.max_distance+1+1)*11 + 1  # + self.vicinity**2
+        self.input_shape = (self.feature_num, )
+        self.Q = DQN.DQNetwork(input_shape=self.input_shape, alpha=0.5, gamma=0.8,
                                dropout_rate=0.1, num_actions=NUM_ACTIONS, batch_size=self.batch_size,
                                learning_rate=self.learning_rate, feature_num=self.feature_num)
         self.memory = []
         self.loss = []
         self.act2idx = {'L': 0, 'R': 1, 'F': 2}
         self.idx2act = {0: 'L', 1: 'R', 2: 'F'}
-        self.memory_length = MEMORY_LENGTH
-        self.epsilon = 0.2
+        self.memory_length = self.batch_size*15
 
 
     def put_stats(self):  # TODO remove after testing
@@ -130,6 +133,47 @@ class MyPolicy(bp.Policy):
         map_after = self.getVicinityMap(board, next_position, moving_dir)
         features = map_after.flatten()
         return features
+    #
+    # def getFeature_2(self, board, head, action):
+    #     head_pos, direction = head
+    #     moving_dir = bp.Policy.TURNS[direction][action]
+    #     # next_position = head_pos.move(moving_dir)
+    #     next_position = (5, 5)
+    #     map_v = self.getVicinityMap(board, next_position, moving_dir)
+    #     center = (self.vicinity, self.vicinity)
+    #     features = np.zeros(self.feature_num)
+    #
+    #     for field_value in range(-1, 10):
+    #         # # how many elements do we have in vicinity
+    #         # offset = 1
+    #         # feature_idx = int(field_value) + offset
+    #         # features[feature_idx] = (map_v == field_value).sum()
+    #
+    #         # how long are we
+    #         features[-1] = (board == self.id).sum()
+    #
+    #         # what is in next and second next field?
+    #         m = (map_v == field_value)
+    #         field_positions = np.matrix(np.where(m)).T
+    #
+    #         distances = []
+    #         for field_pos in field_positions:
+    #             x, y = field_pos.tolist()[0][0], field_pos.tolist()[0][1]
+    #             dist = abs(center[0] - x) + abs(center[1] - y)
+    #             distances.append(dist)
+    #
+    #         # fill feature vector
+    #         for dist in range(0, self.max_distance + 1):
+    #             offset = 12
+    #             if dist in distances:
+    #                 idx = int(field_value) + (dist * 11) + offset
+    #                 features[idx] = 1
+    #
+    #         # f = np.hstack([features, map_v.flatten()])
+    #         print(features)
+    #         # features = features/features.sum()
+    #
+    #     return features
 
     def getFeature_2(self, board, head, action):
         head_pos, direction = head
@@ -137,39 +181,41 @@ class MyPolicy(bp.Policy):
         next_position = head_pos.move(moving_dir)
         map_v = self.getVicinityMap(board, next_position, moving_dir)
         center = (self.vicinity, self.vicinity)
-        max_distance = self.vicinity * 2
         features = np.zeros(self.feature_num)
+
         # what is in next field (like in linear policy)
+        # r, c = next_position
+        # field_value = board[r, c]
+        # offset = 1
+        # feature_idx = int(field_value) + offset
+        # features[feature_idx] = 1
 
-        r, c = next_position
-        field_value = board[r, c]
-        offset = 1
-        feature_idx = int(field_value) + offset
-        features[feature_idx] = 1
+        # how long are we
+        features[-1] = (board == self.id).sum()
 
-        # for field_value in range(-1, 10):
+        for field_value in range(-1, 10):
+            # how many elements do we have
+            offset = 1
+            feature_idx = int(field_value) + offset
+            features[feature_idx] = (map_v == field_value).sum()
 
-            #
-            # # how many elements do we have
-            # offset = self.feature_num + 1
-            # feature_idx = int(field_value) + offset
-            # features[feature_idx] = (board == field_value).sum()
-            #
-            # m = (map_v == field_value)
-            # field_positions = np.matrix(np.where(m)).T
-            #
-            # distances = []
-            # for field_pos in field_positions:
-            #     x, y = field_pos.tolist()[0][0], field_pos.tolist()[0][1]
-            #     dist = abs(center[0] - x) + abs(center[1] - y)
-            #     distances.append(dist)
-            # # fill feautre vector
-            # for val in range(0, max_distance + 1):
-            #     offset = self.feature_num*2 1
-            #     if val in distances:
-            #         idx = int(field_value) + (val * 10) + offset
-            #         features[idx] = 1
+            m = (map_v == field_value)
+            field_positions = np.matrix(np.where(m)).T
 
+            distances = []
+            for field_pos in field_positions:
+                x, y = field_pos.tolist()[0][0], field_pos.tolist()[0][1]
+                dist = abs(center[0] - x) + abs(center[1] - y)
+                distances.append(dist)
+
+            # fill feautre vector
+            for dist in range(0, self.max_distance + 1):
+                offset = 12
+                if dist in distances:
+                    idx = int(field_value) + (dist * 11) + offset
+                    features[idx] = 1
+
+        features = features/features.sum()
         return features
 
     # TODO: add features
@@ -209,7 +255,7 @@ class MyPolicy(bp.Policy):
                 idx = np.random.choice(range(0, self.memory_length))
                 self.memory[idx] = memory_update
 
-        if round == 4999:
+        if round == (self.game_duration-1):
             losses = self.loss
             with open(cwd + "/losses.pickle", "wb") as f:
                 pickle.dump(losses, f)

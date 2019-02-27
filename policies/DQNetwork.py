@@ -16,12 +16,13 @@ class DQNetwork():
         self.act2idx = {'L': 0, 'R': 1, 'F': 2}
 
         self.model = Sequential([
-            Dense(256, activation='relu', input_shape=self.input_shape),
-            Dropout(0.3),
-            Dense(64, activation='relu'),
+            # Dense(256, activation='relu', input_shape=self.input_shape),
+            # Dropout(0.3),
+            #Dense(64, activation='relu'),
+            Dense(8, activation='relu', input_shape=self.input_shape),
             # Dropout(0.3),
             # Dense(self.n_features, activation='relu'),
-            Dropout(0.3),
+            Dropout(0.1),
             Dense(1),
         ])
         adam = keras.optimizers.Adam(lr=self.learning_rate, beta_1=0.9, beta_2=0.999, epsilon=1e-8)
