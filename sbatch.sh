@@ -17,7 +17,7 @@ python3 /cs/usr/franziska/Documents/ReinforcementLearning/Snake.py \
     -rt match_01.pickle
 
 python3 /cs/usr/franziska/Documents/ReinforcementLearning/Snake.py \
-    -P "Avoid(epsilon=0.5);Avoid(epsilon=0.2);MyPolicy(epsilon=0.2);MyPolicy(epsilon=0.3);MyPolicy(epsilon=0.4)"
+    -P "Avoid(epsilon=0.5);Avoid(epsilon=0.2);MyPolicy(epsilon=0.2);MyPolicy(epsilon=0.3);MyPolicy(epsilon=0.4)" \
     -D 7000 -s 1000 -r 0 -plt 0.01 -pat 0.005 -pit 60 \
     -l "/cs/usr/franziska/Documents/ReinforcementLearning/logs/match_02.log" \
     -o "/cs/usr/franziska/Documents/ReinforcementLearning/logs/match_02.out" \
