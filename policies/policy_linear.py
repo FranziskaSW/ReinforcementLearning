@@ -1,11 +1,12 @@
 from policies import base_policy as bp
 import numpy as np
 import operator
+import pickle  # TODO remove after testing
 
 EPSILON = 0.05
-EPSILON_RATE = 0.999
-GAMMA = 0.5
-LEARNING_RATE = 0.05
+EPSILON_RATE = 0.9999
+GAMMA = 0.8
+LEARNING_RATE = 0.01
 FEATURE_NUM = len(['Food1', 'Food2', 'Food3', 'FieldEmpty'])
 
 class Linear(bp.Policy):
@@ -18,7 +19,6 @@ class Linear(bp.Policy):
         policy_args['epsilon'] = float(policy_args['epsilon']) if 'epsilon' in policy_args else EPSILON
         policy_args['gamma'] = float(policy_args['gamma']) if 'gamma' in policy_args else GAMMA
         policy_args['learning_rate'] = float(policy_args['lr']) if 'lr' in policy_args else LEARNING_RATE
-        policy_args['vicinity'] = float(policy_args['vicinity']) if 'vicinity' in policy_args else VICINITY
 
         return policy_args
 
@@ -32,9 +32,13 @@ class Linear(bp.Policy):
         self.last_deltas = []
         self.last_features = []
 
+    def put_stats(self):  # TODO remove after testing
+        pickle.dump(self.loss, open(self.dir_name + '/last_game_loss.pkl', 'wb'))
+        pickle.dump(self.test(), open(self.dir_name + '/last_test_loss.pkl', 'wb'))
+
+
     def learn(self, round, prev_state, prev_action, reward, new_state, too_slow):
 
-        print(self.epsilon)
         #last_features = self.last_features[-1]
         #delta = self.last_deltas[-1]
 
