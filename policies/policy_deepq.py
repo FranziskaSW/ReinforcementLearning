@@ -21,7 +21,7 @@ NUM_ACTIONS = 3  # (L, R, F)
 # BATCH_SIZE = 15
 VICINITY = 8
 
-FEATURE_NUM = 10*(VICINITY*2+1) #(VICINITY*2+1)**2
+FEATURE_NUM = 10*(VICINITY*2+1)+1 #(VICINITY*2+1)**2
 INPUT_SHAPE = (FEATURE_NUM, )
 MEMORY_LENGTH = 2000 #BATCH_SIZE*20
 BATCH_SIZE = 32
@@ -158,7 +158,8 @@ class MyPolicy(bp.Policy):
                     if val in distances:
                         idx = feature_idx + val * 10
                         features[idx] = 1
-        # print(features)
+        # how long is our snake? self.id
+        features[-1] = (board==self.id).sum ()
         return features
 
     # TODO: add features
@@ -167,7 +168,7 @@ class MyPolicy(bp.Policy):
     #
     # def getFeatures(self, board, head):
     #     features = np.zeros([3, FEATURE_NUM])
-    #     head_pos, direction = head
+    #     head_pos, direction = head2
     #     for a in self.act2idx:
     #         moving_dir = bp.Policy.TURNS[direction][a]
     #         next_position = head_pos.move(moving_dir)
