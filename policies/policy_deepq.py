@@ -58,11 +58,10 @@ class MyPolicy(bp.Policy):
     def put_stats(self):  # TODO remove after testing
         pickle.dump(self.loss, open(self.dir_name + '/last_game_loss.pkl', 'wb'))
         pickle.dump(self.test(), open(self.dir_name + '/last_test_loss.pkl', 'wb'))
-    #
-    # def test(self):  # TODO REMOVE AFTER TESTING
-    #     gt = self.Q.(self.replay_next, self.replay_reward, self.replay_idx)
-    #     loss = self.model.train_on_batch(self.replay_prev[:self.replay_idx], gt)
-    #     return loss
+
+    def test(self):  # TODO REMOVE AFTER TESTING
+        loss = self.loss
+        return loss
 
 
     def learn(self, round, prev_state, prev_action, reward, new_state, too_slow):
