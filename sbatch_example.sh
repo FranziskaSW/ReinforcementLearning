@@ -1,7 +1,7 @@
 #!/bin/csh
 
 #SBATCH --cpus-per-task=2
-#SBATCH --output=/cs/usr/franziska/Documents/ReinforcementLearning/logs/
+#SBATCH --output=/cs/usr/franziska/ReinforcementLearning/logs/
 #SBATCH --mem-per-cpu=500M
 #SBATCH --account=aml
 #SBATCH --constraint="sm"
@@ -30,7 +30,6 @@ python3 /cs/usr/franziska/Documents/ReinforcementLearning/Snake.py \
     -l match_01_bs.log \
     -o match_01_bs.out \
     -rt match_01_bs.pickle
-
 
 python3 /cs/usr/franziska/Documents/ReinforcementLearning/Snake.py \
     -P "Avoid(epsilon=0.1);MyPolicy(learning_rate=0.01);MyPolicy(learning_rate=0.001);MyPolicy(learning_rate=0.0001);MyPolicy(learning_rate=0.00001)" \

@@ -48,7 +48,7 @@ class MyPolicy(bp.Policy):
         self.loss = []
         self.act2idx = {'L': 0, 'R': 1, 'F': 2}
         self.idx2act = {0: 'L', 1: 'R', 2: 'F'}
-        self.memory_length = self.batch_size*20
+        self.memory_length = int(self.batch_size*20)
 
 
     def put_stats(self):  # TODO remove after testing
