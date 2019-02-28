@@ -1,7 +1,7 @@
 #!/bin/csh
 
 #SBATCH --cpus-per-task=2
-#SBATCH --output=/cs/usr/franziska/ReinforcementLearning/logs/
+#SBATCH --output=/cs/usr/franziska/ReinforcementLearning/logs
 #SBATCH --mem-per-cpu=500M
 #SBATCH --account=aml
 #SBATCH --constraint="sm"
