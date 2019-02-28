@@ -1,254 +1,349 @@
-0::0:0:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
-0::0:0:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
-0::0:0:5	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
-0::0:0:7	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
-0::0:0:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
-0::0:0:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #3 in a row!
-0::0:0:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #4 in a row!
-0::0:0:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #5 in a row!
-0::0:0:8	4	ERROR	No Response: player took too long to respond with action. This is No Response #6 in a row!
-0::0:0:13	2	VALUE	Rewards in last 100 rounds: -1
-0::0:0:13	3	VALUE	Rewards in last 100 rounds: -5
-0::0:0:13	0	VALUE	Rewards in last 100 rounds: 0
-0::0:0:13	1	VALUE	Rewards in last 100 rounds: 0
-0::0:0:13	4	VALUE	Rewards in last 100 rounds: -14
-0::0:0:21	1	VALUE	Rewards in last 100 rounds: 5
-0::0:0:21	0	VALUE	Rewards in last 100 rounds: 0
-0::0:0:21	2	VALUE	Rewards in last 100 rounds: 7
-0::0:0:21	3	VALUE	Rewards in last 100 rounds: -6
-0::0:0:21	4	VALUE	Rewards in last 100 rounds: -10
-0::0:0:29	3	VALUE	Rewards in last 100 rounds: 0
-0::0:0:29	0	VALUE	Rewards in last 100 rounds: 5
-0::0:0:29	2	VALUE	Rewards in last 100 rounds: 0
-0::0:0:29	1	VALUE	Rewards in last 100 rounds: -5
-0::0:0:29	4	VALUE	Rewards in last 100 rounds: 0
-0::0:0:38	0	VALUE	Rewards in last 100 rounds: 4
-0::0:0:38	2	VALUE	Rewards in last 100 rounds: -5
-0::0:0:38	3	VALUE	Rewards in last 100 rounds: -1
-0::0:0:38	1	VALUE	Rewards in last 100 rounds: 0
-0::0:0:38	4	VALUE	Rewards in last 100 rounds: 0
-0::0:0:46	3	VALUE	Rewards in last 100 rounds: 1
-0::0:0:46	2	VALUE	Rewards in last 100 rounds: -5
-0::0:0:46	1	VALUE	Rewards in last 100 rounds: 4
-0::0:0:46	0	VALUE	Rewards in last 100 rounds: -1
-0::0:0:46	4	VALUE	Rewards in last 100 rounds: -10
-0::0:0:54	2	VALUE	Rewards in last 100 rounds: 15
-0::0:0:54	0	VALUE	Rewards in last 100 rounds: -2
-0::0:0:54	1	VALUE	Rewards in last 100 rounds: 0
-0::0:0:54	3	VALUE	Rewards in last 100 rounds: -1
-0::0:0:54	4	VALUE	Rewards in last 100 rounds: -5
-0::0:1:3	2	VALUE	Rewards in last 100 rounds: 7
-0::0:1:3	0	VALUE	Rewards in last 100 rounds: 0
-0::0:1:3	3	VALUE	Rewards in last 100 rounds: -5
-0::0:1:3	1	VALUE	Rewards in last 100 rounds: -1
-0::0:1:3	4	VALUE	Rewards in last 100 rounds: -5
-0::0:1:11	2	VALUE	Rewards in last 100 rounds: 5
-0::0:1:11	1	VALUE	Rewards in last 100 rounds: -5
-0::0:1:11	0	VALUE	Rewards in last 100 rounds: -1
-0::0:1:11	3	VALUE	Rewards in last 100 rounds: 4
-0::0:1:11	4	VALUE	Rewards in last 100 rounds: 4
-0::0:1:19	1	VALUE	Rewards in last 100 rounds: 2
-0::0:1:19	0	VALUE	Rewards in last 100 rounds: -1
-0::0:1:19	2	VALUE	Rewards in last 100 rounds: -1
-0::0:1:19	3	VALUE	Rewards in last 100 rounds: 5
-0::0:1:19	4	VALUE	Rewards in last 100 rounds: -15
-0::0:1:28	1	VALUE	Rewards in last 100 rounds: 9
-0::0:1:28	0	VALUE	Rewards in last 100 rounds: 5
-0::0:1:28	2	VALUE	Rewards in last 100 rounds: 2
-0::0:1:28	3	VALUE	Rewards in last 100 rounds: -3
-0::0:1:28	4	VALUE	Rewards in last 100 rounds: -1
-0::0:1:36	1	VALUE	Rewards in last 100 rounds: -1
-0::0:1:36	3	VALUE	Rewards in last 100 rounds: -4
-0::0:1:36	0	VALUE	Rewards in last 100 rounds: -5
-0::0:1:36	2	VALUE	Rewards in last 100 rounds: 4
-0::0:1:36	4	VALUE	Rewards in last 100 rounds: 0
-0::0:1:44	1	VALUE	Rewards in last 100 rounds: 1
-0::0:1:44	2	VALUE	Rewards in last 100 rounds: 0
-0::0:1:44	3	VALUE	Rewards in last 100 rounds: -1
-0::0:1:44	0	VALUE	Rewards in last 100 rounds: 16
-0::0:1:44	4	VALUE	Rewards in last 100 rounds: 9
-0::0:1:53	0	VALUE	Rewards in last 100 rounds: 2
-0::0:1:53	1	VALUE	Rewards in last 100 rounds: 0
-0::0:1:53	2	VALUE	Rewards in last 100 rounds: -5
-0::0:1:53	3	VALUE	Rewards in last 100 rounds: 2
-0::0:1:53	4	VALUE	Rewards in last 100 rounds: -5
-0::0:2:1	2	VALUE	Rewards in last 100 rounds: 0
-0::0:2:1	1	VALUE	Rewards in last 100 rounds: 11
-0::0:2:1	3	VALUE	Rewards in last 100 rounds: -5
-0::0:2:1	0	VALUE	Rewards in last 100 rounds: 3
-0::0:2:1	4	VALUE	Rewards in last 100 rounds: 5
-0::0:2:9	3	VALUE	Rewards in last 100 rounds: 0
-0::0:2:9	2	VALUE	Rewards in last 100 rounds: -1
-0::0:2:9	0	VALUE	Rewards in last 100 rounds: 0
-0::0:2:9	1	VALUE	Rewards in last 100 rounds: 2
-0::0:2:9	4	VALUE	Rewards in last 100 rounds: 5
-0::0:2:17	2	VALUE	Rewards in last 100 rounds: 2
-0::0:2:17	3	VALUE	Rewards in last 100 rounds: -3
-0::0:2:17	0	VALUE	Rewards in last 100 rounds: 0
-0::0:2:17	1	VALUE	Rewards in last 100 rounds: 1
-0::0:2:17	4	VALUE	Rewards in last 100 rounds: 8
-0::0:2:26	1	VALUE	Rewards in last 100 rounds: -5
-0::0:2:26	2	VALUE	Rewards in last 100 rounds: 1
-0::0:2:26	3	VALUE	Rewards in last 100 rounds: 4
-0::0:2:26	0	VALUE	Rewards in last 100 rounds: 0
-0::0:2:26	4	VALUE	Rewards in last 100 rounds: 0
-0::0:2:34	3	VALUE	Rewards in last 100 rounds: 3
-0::0:2:34	0	VALUE	Rewards in last 100 rounds: -3
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:0	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #1 in a row!
+0::0:1:3	4	ERROR	No Response: player took too long to respond with action. This is No Response #2 in a row!
+0::0:1:9	0	VALUE	Rewards in last 100 rounds: 0
+0::0:1:9	2	VALUE	Rewards in last 100 rounds: 0
+0::0:1:9	1	VALUE	Rewards in last 100 rounds: 2
+0::0:1:9	3	VALUE	Rewards in last 100 rounds: -5
+0::0:1:9	4	VALUE	Rewards in last 100 rounds: -5
+0::0:1:18	2	VALUE	Rewards in last 100 rounds: 0
+0::0:1:18	3	VALUE	Rewards in last 100 rounds: 0
+0::0:1:18	1	VALUE	Rewards in last 100 rounds: 5
+0::0:1:18	0	VALUE	Rewards in last 100 rounds: 0
+0::0:1:18	4	VALUE	Rewards in last 100 rounds: -11
+0::0:1:28	1	VALUE	Rewards in last 100 rounds: 0
+0::0:1:28	3	VALUE	Rewards in last 100 rounds: 0
+0::0:1:28	0	VALUE	Rewards in last 100 rounds: 0
+0::0:1:28	2	VALUE	Rewards in last 100 rounds: 0
+0::0:1:28	4	VALUE	Rewards in last 100 rounds: 0
+0::0:1:37	0	VALUE	Rewards in last 100 rounds: 5
+0::0:1:37	3	VALUE	Rewards in last 100 rounds: 0
+0::0:1:37	2	VALUE	Rewards in last 100 rounds: -8
+0::0:1:37	1	VALUE	Rewards in last 100 rounds: 4
+0::0:1:37	4	VALUE	Rewards in last 100 rounds: -10
+0::0:1:46	3	VALUE	Rewards in last 100 rounds: 0
+0::0:1:46	0	VALUE	Rewards in last 100 rounds: 7
+0::0:1:46	1	VALUE	Rewards in last 100 rounds: -5
+0::0:1:46	2	VALUE	Rewards in last 100 rounds: 0
+0::0:1:47	4	VALUE	Rewards in last 100 rounds: 4
+0::0:1:56	2	VALUE	Rewards in last 100 rounds: 7
+0::0:1:56	0	VALUE	Rewards in last 100 rounds: 0
+0::0:1:56	1	VALUE	Rewards in last 100 rounds: 0
+0::0:1:56	3	VALUE	Rewards in last 100 rounds: -3
+0::0:1:56	4	VALUE	Rewards in last 100 rounds: -8
+0::0:2:5	1	VALUE	Rewards in last 100 rounds: 1
+0::0:2:5	3	VALUE	Rewards in last 100 rounds: 2
+0::0:2:5	2	VALUE	Rewards in last 100 rounds: 0
+0::0:2:5	0	VALUE	Rewards in last 100 rounds: -1
+0::0:2:5	4	VALUE	Rewards in last 100 rounds: -9
+0::0:2:15	2	VALUE	Rewards in last 100 rounds: 5
+0::0:2:15	0	VALUE	Rewards in last 100 rounds: -2
+0::0:2:15	1	VALUE	Rewards in last 100 rounds: 10
+0::0:2:15	3	VALUE	Rewards in last 100 rounds: 9
+0::0:2:15	4	VALUE	Rewards in last 100 rounds: -14
+0::0:2:24	2	VALUE	Rewards in last 100 rounds: 12
+0::0:2:24	3	VALUE	Rewards in last 100 rounds: 7
+0::0:2:24	0	VALUE	Rewards in last 100 rounds: 5
+0::0:2:24	1	VALUE	Rewards in last 100 rounds: 1
+0::0:2:25	4	VALUE	Rewards in last 100 rounds: -26
 0::0:2:34	1	VALUE	Rewards in last 100 rounds: -4
-0::0:2:34	2	VALUE	Rewards in last 100 rounds: 0
-0::0:2:34	4	VALUE	Rewards in last 100 rounds: 0
-0::0:2:42	2	VALUE	Rewards in last 100 rounds: 0
-0::0:2:42	0	VALUE	Rewards in last 100 rounds: 0
-0::0:2:42	3	VALUE	Rewards in last 100 rounds: 0
-0::0:2:42	1	VALUE	Rewards in last 100 rounds: 3
-0::0:2:42	4	VALUE	Rewards in last 100 rounds: -5
-0::0:2:51	1	VALUE	Rewards in last 100 rounds: 4
-0::0:2:51	0	VALUE	Rewards in last 100 rounds: -5
-0::0:2:51	3	VALUE	Rewards in last 100 rounds: 2
-0::0:2:51	2	VALUE	Rewards in last 100 rounds: 10
-0::0:2:51	4	VALUE	Rewards in last 100 rounds: 4
-0::0:2:59	0	VALUE	Rewards in last 100 rounds: 0
-0::0:2:59	2	VALUE	Rewards in last 100 rounds: -3
-0::0:2:59	3	VALUE	Rewards in last 100 rounds: -6
-0::0:2:59	1	VALUE	Rewards in last 100 rounds: 10
-0::0:2:59	4	VALUE	Rewards in last 100 rounds: 0
-0::0:3:7	3	VALUE	Rewards in last 100 rounds: 0
-0::0:3:7	2	VALUE	Rewards in last 100 rounds: 0
-0::0:3:7	1	VALUE	Rewards in last 100 rounds: 0
-0::0:3:7	0	VALUE	Rewards in last 100 rounds: 4
-0::0:3:7	4	VALUE	Rewards in last 100 rounds: 7
-0::0:3:16	1	VALUE	Rewards in last 100 rounds: -4
-0::0:3:16	3	VALUE	Rewards in last 100 rounds: 0
-0::0:3:16	0	VALUE	Rewards in last 100 rounds: -1
-0::0:3:16	2	VALUE	Rewards in last 100 rounds: 12
-0::0:3:16	4	VALUE	Rewards in last 100 rounds: 6
-0::0:3:24	3	VALUE	Rewards in last 100 rounds: 2
-0::0:3:24	1	VALUE	Rewards in last 100 rounds: 18
-0::0:3:24	0	VALUE	Rewards in last 100 rounds: 2
-0::0:3:24	2	VALUE	Rewards in last 100 rounds: 5
-0::0:3:24	4	VALUE	Rewards in last 100 rounds: 2
-0::0:3:32	2	VALUE	Rewards in last 100 rounds: -2
-0::0:3:32	1	VALUE	Rewards in last 100 rounds: 1
-0::0:3:32	3	VALUE	Rewards in last 100 rounds: 0
-0::0:3:32	0	VALUE	Rewards in last 100 rounds: 4
-0::0:3:32	4	VALUE	Rewards in last 100 rounds: 11
-0::0:3:41	0	VALUE	Rewards in last 100 rounds: 0
+0::0:2:34	0	VALUE	Rewards in last 100 rounds: 0
+0::0:2:34	2	VALUE	Rewards in last 100 rounds: 2
+0::0:2:34	3	VALUE	Rewards in last 100 rounds: 9
+0::0:2:34	4	VALUE	Rewards in last 100 rounds: -17
+0::0:2:43	3	VALUE	Rewards in last 100 rounds: 4
+0::0:2:43	2	VALUE	Rewards in last 100 rounds: 4
+0::0:2:43	1	VALUE	Rewards in last 100 rounds: 5
+0::0:2:43	0	VALUE	Rewards in last 100 rounds: 2
+0::0:2:43	4	VALUE	Rewards in last 100 rounds: -35
+0::0:2:53	1	VALUE	Rewards in last 100 rounds: 6
+0::0:2:53	3	VALUE	Rewards in last 100 rounds: -1
+0::0:2:53	0	VALUE	Rewards in last 100 rounds: -1
+0::0:2:53	2	VALUE	Rewards in last 100 rounds: 4
+0::0:2:53	4	VALUE	Rewards in last 100 rounds: -30
+0::0:3:2	0	VALUE	Rewards in last 100 rounds: 2
+0::0:3:2	1	VALUE	Rewards in last 100 rounds: -1
+0::0:3:2	2	VALUE	Rewards in last 100 rounds: 11
+0::0:3:2	3	VALUE	Rewards in last 100 rounds: -1
+0::0:3:2	4	VALUE	Rewards in last 100 rounds: -29
+0::0:3:12	3	VALUE	Rewards in last 100 rounds: 5
+0::0:3:12	2	VALUE	Rewards in last 100 rounds: 5
+0::0:3:12	0	VALUE	Rewards in last 100 rounds: -1
+0::0:3:12	1	VALUE	Rewards in last 100 rounds: 10
+0::0:3:12	4	VALUE	Rewards in last 100 rounds: -23
+0::0:3:22	1	VALUE	Rewards in last 100 rounds: 14
+0::0:3:22	2	VALUE	Rewards in last 100 rounds: 9
+0::0:3:22	3	VALUE	Rewards in last 100 rounds: 4
+0::0:3:22	0	VALUE	Rewards in last 100 rounds: 3
+0::0:3:22	4	VALUE	Rewards in last 100 rounds: -16
+0::0:3:31	3	VALUE	Rewards in last 100 rounds: 2
+0::0:3:31	1	VALUE	Rewards in last 100 rounds: 10
+0::0:3:31	2	VALUE	Rewards in last 100 rounds: 6
+0::0:3:31	0	VALUE	Rewards in last 100 rounds: 6
+0::0:3:31	4	VALUE	Rewards in last 100 rounds: -25
+0::0:3:41	3	VALUE	Rewards in last 100 rounds: 2
 0::0:3:41	1	VALUE	Rewards in last 100 rounds: 2
-0::0:3:41	2	VALUE	Rewards in last 100 rounds: -2
-0::0:3:41	3	VALUE	Rewards in last 100 rounds: -3
-0::0:3:41	4	VALUE	Rewards in last 100 rounds: -4
-0::0:3:49	2	VALUE	Rewards in last 100 rounds: 7
-0::0:3:49	0	VALUE	Rewards in last 100 rounds: 4
-0::0:3:49	3	VALUE	Rewards in last 100 rounds: -1
-0::0:3:49	1	VALUE	Rewards in last 100 rounds: -1
-0::0:3:49	4	VALUE	Rewards in last 100 rounds: -11
-0::0:3:57	3	VALUE	Rewards in last 100 rounds: -1
-0::0:3:57	2	VALUE	Rewards in last 100 rounds: 5
-0::0:3:57	1	VALUE	Rewards in last 100 rounds: -10
-0::0:3:57	0	VALUE	Rewards in last 100 rounds: -1
-0::0:3:57	4	VALUE	Rewards in last 100 rounds: 4
-0::0:4:6	3	VALUE	Rewards in last 100 rounds: 2
-0::0:4:6	0	VALUE	Rewards in last 100 rounds: 0
-0::0:4:6	2	VALUE	Rewards in last 100 rounds: 10
-0::0:4:6	1	VALUE	Rewards in last 100 rounds: -3
-0::0:4:6	4	VALUE	Rewards in last 100 rounds: 11
-0::0:4:14	0	VALUE	Rewards in last 100 rounds: 7
-0::0:4:14	1	VALUE	Rewards in last 100 rounds: 4
-0::0:4:14	3	VALUE	Rewards in last 100 rounds: 0
-0::0:4:14	2	VALUE	Rewards in last 100 rounds: -6
-0::0:4:14	4	VALUE	Rewards in last 100 rounds: 13
-0::0:4:22	0	VALUE	Rewards in last 100 rounds: -1
-0::0:4:22	1	VALUE	Rewards in last 100 rounds: 2
-0::0:4:22	3	VALUE	Rewards in last 100 rounds: -2
-0::0:4:22	2	VALUE	Rewards in last 100 rounds: -4
-0::0:4:22	4	VALUE	Rewards in last 100 rounds: 5
-0::0:4:31	1	VALUE	Rewards in last 100 rounds: -5
-0::0:4:31	2	VALUE	Rewards in last 100 rounds: 2
-0::0:4:31	3	VALUE	Rewards in last 100 rounds: 10
-0::0:4:31	0	VALUE	Rewards in last 100 rounds: 0
-0::0:4:31	4	VALUE	Rewards in last 100 rounds: 6
-0::0:4:39	0	VALUE	Rewards in last 100 rounds: 5
-0::0:4:39	2	VALUE	Rewards in last 100 rounds: -1
-0::0:4:39	1	VALUE	Rewards in last 100 rounds: 0
-0::0:4:39	3	VALUE	Rewards in last 100 rounds: -1
-0::0:4:39	4	VALUE	Rewards in last 100 rounds: 11
-0::0:4:47	2	VALUE	Rewards in last 100 rounds: 0
-0::0:4:47	0	VALUE	Rewards in last 100 rounds: 5
-0::0:4:47	3	VALUE	Rewards in last 100 rounds: 5
-0::0:4:47	1	VALUE	Rewards in last 100 rounds: -1
-0::0:4:47	4	VALUE	Rewards in last 100 rounds: 9
-0::0:4:56	3	VALUE	Rewards in last 100 rounds: 0
-0::0:4:56	0	VALUE	Rewards in last 100 rounds: 7
-0::0:4:56	2	VALUE	Rewards in last 100 rounds: 0
-0::0:4:56	1	VALUE	Rewards in last 100 rounds: -6
-0::0:4:56	4	VALUE	Rewards in last 100 rounds: 0
-0::0:5:4	0	VALUE	Rewards in last 100 rounds: 0
-0::0:5:4	3	VALUE	Rewards in last 100 rounds: 1
-0::0:5:4	2	VALUE	Rewards in last 100 rounds: -5
-0::0:5:4	1	VALUE	Rewards in last 100 rounds: -5
-0::0:5:4	4	VALUE	Rewards in last 100 rounds: 4
-0::0:5:12	0	VALUE	Rewards in last 100 rounds: 4
-0::0:5:12	2	VALUE	Rewards in last 100 rounds: 7
-0::0:5:12	3	VALUE	Rewards in last 100 rounds: -1
-0::0:5:12	1	VALUE	Rewards in last 100 rounds: -7
-0::0:5:12	4	VALUE	Rewards in last 100 rounds: -6
-0::0:5:20	2	VALUE	Rewards in last 100 rounds: 0
-0::0:5:20	1	VALUE	Rewards in last 100 rounds: 6
-0::0:5:20	3	VALUE	Rewards in last 100 rounds: 1
-0::0:5:20	0	VALUE	Rewards in last 100 rounds: -6
-0::0:5:21	4	VALUE	Rewards in last 100 rounds: 0
-0::0:5:29	2	VALUE	Rewards in last 100 rounds: 1
-0::0:5:29	1	VALUE	Rewards in last 100 rounds: 5
-0::0:5:29	3	VALUE	Rewards in last 100 rounds: 4
-0::0:5:29	0	VALUE	Rewards in last 100 rounds: 2
-0::0:5:29	4	VALUE	Rewards in last 100 rounds: 4
-0::0:5:37	3	VALUE	Rewards in last 100 rounds: -5
-0::0:5:37	0	VALUE	Rewards in last 100 rounds: -1
-0::0:5:37	1	VALUE	Rewards in last 100 rounds: -3
-0::0:5:37	2	VALUE	Rewards in last 100 rounds: 15
-0::0:5:37	4	VALUE	Rewards in last 100 rounds: 10
-0::0:5:45	3	VALUE	Rewards in last 100 rounds which counts towards the score: 2
-0::0:5:45	2	VALUE	Rewards in last 100 rounds which counts towards the score: 0
-0::0:5:45	0	VALUE	Rewards in last 100 rounds which counts towards the score: 0
-0::0:5:45	1	VALUE	Rewards in last 100 rounds which counts towards the score: 6
-0::0:5:45	4	VALUE	Rewards in last 100 rounds which counts towards the score: -5
-0::0:5:54	3	VALUE	Rewards in last 100 rounds which counts towards the score: 0
-0::0:5:54	0	VALUE	Rewards in last 100 rounds which counts towards the score: 0
-0::0:5:54	2	VALUE	Rewards in last 100 rounds which counts towards the score: 5
-0::0:5:54	1	VALUE	Rewards in last 100 rounds which counts towards the score: 0
-0::0:5:54	4	VALUE	Rewards in last 100 rounds which counts towards the score: 7
-0::0:6:2	3	VALUE	Rewards in last 100 rounds which counts towards the score: 2
-0::0:6:2	2	VALUE	Rewards in last 100 rounds which counts towards the score: 0
-0::0:6:2	1	VALUE	Rewards in last 100 rounds which counts towards the score: 0
-0::0:6:2	0	VALUE	Rewards in last 100 rounds which counts towards the score: 0
-0::0:6:2	4	VALUE	Rewards in last 100 rounds which counts towards the score: -3
-0::0:6:10	3	VALUE	Rewards in last 100 rounds which counts towards the score: 0
-0::0:6:10	0	VALUE	Rewards in last 100 rounds which counts towards the score: 0
-0::0:6:10	2	VALUE	Rewards in last 100 rounds which counts towards the score: 0
-0::0:6:10	1	VALUE	Rewards in last 100 rounds which counts towards the score: 2
-0::0:6:10	4	VALUE	Rewards in last 100 rounds which counts towards the score: -5
-0::0:6:19	1	VALUE	Rewards in last 100 rounds which counts towards the score: 5
-0::0:6:19	2	VALUE	Rewards in last 100 rounds which counts towards the score: 0
-0::0:6:19	0	VALUE	Rewards in last 100 rounds which counts towards the score: 0
-0::0:6:19	3	VALUE	Rewards in last 100 rounds which counts towards the score: 0
-0::0:6:19	4	VALUE	Rewards in last 100 rounds which counts towards the score: 4
-0::0:6:27	0	VALUE	Rewards in last 100 rounds which counts towards the score: 0
-0::0:6:27	1	VALUE	Rewards in last 100 rounds which counts towards the score: -1
-0::0:6:27	3	VALUE	Rewards in last 100 rounds which counts towards the score: 2
-0::0:6:27	2	VALUE	Rewards in last 100 rounds which counts towards the score: -1
-0::0:6:27	4	VALUE	Rewards in last 100 rounds which counts towards the score: 4
-0::0:6:35	3	VALUE	Rewards in last 100 rounds which counts towards the score: 0
-0::0:6:35	2	VALUE	Rewards in last 100 rounds which counts towards the score: 4
-0::0:6:35	0	VALUE	Rewards in last 100 rounds which counts towards the score: 12
-0::0:6:35	1	VALUE	Rewards in last 100 rounds which counts towards the score: 0
-0::0:6:35	4	VALUE	Rewards in last 100 rounds which counts towards the score: -1
-0::0:6:44	1	VALUE	Rewards in last 100 rounds which counts towards the score: -6
-0::0:6:44	3	VALUE	Rewards in last 100 rounds which counts towards the score: 0
-0::0:6:44	2	VALUE	Rewards in last 100 rounds which counts towards the score: 0
-0::0:6:44	0	VALUE	Rewards in last 100 rounds which counts towards the score: 0
-0::0:6:44	4	VALUE	Rewards in last 100 rounds which counts towards the score: 0
-0::0:6:52	2	VALUE	Rewards in last 100 rounds which counts towards the score: -1
-0::0:6:52	3	VALUE	Rewards in last 100 rounds which counts towards the score: -10
-0::0:6:52	1	VALUE	Rewards in last 100 rounds which counts towards the score: -1
-0::0:6:52	0	VALUE	Rewards in last 100 rounds which counts towards the score: 0
-0::0:6:52	4	VALUE	Rewards in last 100 rounds which counts towards the score: 1
+0::0:3:41	0	VALUE	Rewards in last 100 rounds: -2
+0::0:3:41	2	VALUE	Rewards in last 100 rounds: 8
+0::0:3:41	4	VALUE	Rewards in last 100 rounds: -14
+0::0:3:50	0	VALUE	Rewards in last 100 rounds: 9
+0::0:3:50	1	VALUE	Rewards in last 100 rounds: -2
+0::0:3:50	3	VALUE	Rewards in last 100 rounds: 9
+0::0:3:50	2	VALUE	Rewards in last 100 rounds: 0
+0::0:3:50	4	VALUE	Rewards in last 100 rounds: -6
+0::0:4:0	3	VALUE	Rewards in last 100 rounds: -1
+0::0:4:0	2	VALUE	Rewards in last 100 rounds: -5
+0::0:4:0	0	VALUE	Rewards in last 100 rounds: 9
+0::0:4:0	1	VALUE	Rewards in last 100 rounds: 5
+0::0:4:0	4	VALUE	Rewards in last 100 rounds: -28
+0::0:4:9	3	VALUE	Rewards in last 100 rounds: 4
+0::0:4:9	0	VALUE	Rewards in last 100 rounds: -3
+0::0:4:9	2	VALUE	Rewards in last 100 rounds: 9
+0::0:4:9	1	VALUE	Rewards in last 100 rounds: 5
+0::0:4:9	4	VALUE	Rewards in last 100 rounds: -11
+0::0:4:19	2	VALUE	Rewards in last 100 rounds: 14
+0::0:4:19	1	VALUE	Rewards in last 100 rounds: -1
+0::0:4:19	3	VALUE	Rewards in last 100 rounds: -5
+0::0:4:19	0	VALUE	Rewards in last 100 rounds: 3
+0::0:4:19	4	VALUE	Rewards in last 100 rounds: -20
+0::0:4:28	2	VALUE	Rewards in last 100 rounds: 1
+0::0:4:28	0	VALUE	Rewards in last 100 rounds: 5
+0::0:4:28	3	VALUE	Rewards in last 100 rounds: 11
+0::0:4:28	1	VALUE	Rewards in last 100 rounds: 4
+0::0:4:28	4	VALUE	Rewards in last 100 rounds: -20
+0::0:4:38	1	VALUE	Rewards in last 100 rounds: 13
+0::0:4:38	2	VALUE	Rewards in last 100 rounds: -5
+0::0:4:38	0	VALUE	Rewards in last 100 rounds: 2
+0::0:4:38	3	VALUE	Rewards in last 100 rounds: -6
+0::0:4:38	4	VALUE	Rewards in last 100 rounds: -25
+0::0:4:48	1	VALUE	Rewards in last 100 rounds: 0
+0::0:4:48	2	VALUE	Rewards in last 100 rounds: 19
+0::0:4:48	0	VALUE	Rewards in last 100 rounds: 0
+0::0:4:48	3	VALUE	Rewards in last 100 rounds: 7
+0::0:4:48	4	VALUE	Rewards in last 100 rounds: -35
+0::0:4:57	3	VALUE	Rewards in last 100 rounds: 7
+0::0:4:57	2	VALUE	Rewards in last 100 rounds: 1
+0::0:4:57	0	VALUE	Rewards in last 100 rounds: 13
+0::0:4:57	1	VALUE	Rewards in last 100 rounds: -5
+0::0:4:57	4	VALUE	Rewards in last 100 rounds: -20
+0::0:5:7	3	VALUE	Rewards in last 100 rounds: -6
+0::0:5:7	1	VALUE	Rewards in last 100 rounds: 0
+0::0:5:7	2	VALUE	Rewards in last 100 rounds: -5
+0::0:5:7	0	VALUE	Rewards in last 100 rounds: 6
+0::0:5:7	4	VALUE	Rewards in last 100 rounds: -21
+0::0:5:16	0	VALUE	Rewards in last 100 rounds: 4
+0::0:5:16	2	VALUE	Rewards in last 100 rounds: 15
+0::0:5:16	1	VALUE	Rewards in last 100 rounds: 6
+0::0:5:16	3	VALUE	Rewards in last 100 rounds: 3
+0::0:5:16	4	VALUE	Rewards in last 100 rounds: -41
+0::0:5:26	1	VALUE	Rewards in last 100 rounds: 0
+0::0:5:26	2	VALUE	Rewards in last 100 rounds: 0
+0::0:5:26	3	VALUE	Rewards in last 100 rounds: 1
+0::0:5:26	0	VALUE	Rewards in last 100 rounds: -1
+0::0:5:26	4	VALUE	Rewards in last 100 rounds: -40
+0::0:5:35	0	VALUE	Rewards in last 100 rounds: 7
+0::0:5:35	2	VALUE	Rewards in last 100 rounds: -11
+0::0:5:35	1	VALUE	Rewards in last 100 rounds: 26
+0::0:5:35	3	VALUE	Rewards in last 100 rounds: 10
+0::0:5:35	4	VALUE	Rewards in last 100 rounds: -15
+0::0:5:45	2	VALUE	Rewards in last 100 rounds: 17
+0::0:5:45	1	VALUE	Rewards in last 100 rounds: 6
+0::0:5:45	0	VALUE	Rewards in last 100 rounds: 7
+0::0:5:45	3	VALUE	Rewards in last 100 rounds: 0
+0::0:5:45	4	VALUE	Rewards in last 100 rounds: -6
+0::0:5:55	3	VALUE	Rewards in last 100 rounds: 7
+0::0:5:55	2	VALUE	Rewards in last 100 rounds: 7
+0::0:5:55	0	VALUE	Rewards in last 100 rounds: 0
+0::0:5:55	1	VALUE	Rewards in last 100 rounds: 0
+0::0:5:55	4	VALUE	Rewards in last 100 rounds: -30
+0::0:6:4	0	VALUE	Rewards in last 100 rounds: 10
+0::0:6:4	3	VALUE	Rewards in last 100 rounds: 9
+0::0:6:4	2	VALUE	Rewards in last 100 rounds: 0
+0::0:6:4	1	VALUE	Rewards in last 100 rounds: 12
+0::0:6:4	4	VALUE	Rewards in last 100 rounds: -20
+0::0:6:14	0	VALUE	Rewards in last 100 rounds: 7
+0::0:6:14	2	VALUE	Rewards in last 100 rounds: 1
+0::0:6:14	1	VALUE	Rewards in last 100 rounds: 15
+0::0:6:14	3	VALUE	Rewards in last 100 rounds: 4
+0::0:6:14	4	VALUE	Rewards in last 100 rounds: -10
+0::0:6:23	0	VALUE	Rewards in last 100 rounds: 7
+0::0:6:23	1	VALUE	Rewards in last 100 rounds: -1
+0::0:6:23	2	VALUE	Rewards in last 100 rounds: 0
+0::0:6:23	3	VALUE	Rewards in last 100 rounds: 6
+0::0:6:23	4	VALUE	Rewards in last 100 rounds: -30
+0::0:6:33	3	VALUE	Rewards in last 100 rounds: 7
+0::0:6:33	1	VALUE	Rewards in last 100 rounds: 0
+0::0:6:33	2	VALUE	Rewards in last 100 rounds: 10
+0::0:6:33	0	VALUE	Rewards in last 100 rounds: 12
+0::0:6:33	4	VALUE	Rewards in last 100 rounds: -21
+0::0:6:43	3	VALUE	Rewards in last 100 rounds: -1
+0::0:6:43	0	VALUE	Rewards in last 100 rounds: 3
+0::0:6:43	1	VALUE	Rewards in last 100 rounds: 4
+0::0:6:43	2	VALUE	Rewards in last 100 rounds: 7
+0::0:6:43	4	VALUE	Rewards in last 100 rounds: -14
+0::0:6:52	2	VALUE	Rewards in last 100 rounds: 5
+0::0:6:52	0	VALUE	Rewards in last 100 rounds: 5
+0::0:6:52	3	VALUE	Rewards in last 100 rounds: 7
+0::0:6:52	1	VALUE	Rewards in last 100 rounds: -5
+0::0:6:52	4	VALUE	Rewards in last 100 rounds: -33
+0::0:7:2	3	VALUE	Rewards in last 100 rounds: 13
+0::0:7:2	1	VALUE	Rewards in last 100 rounds: 7
+0::0:7:2	0	VALUE	Rewards in last 100 rounds: -5
+0::0:7:2	2	VALUE	Rewards in last 100 rounds: -1
+0::0:7:2	4	VALUE	Rewards in last 100 rounds: -32
+0::0:7:12	3	VALUE	Rewards in last 100 rounds: 1
+0::0:7:12	1	VALUE	Rewards in last 100 rounds: 3
+0::0:7:12	2	VALUE	Rewards in last 100 rounds: -6
+0::0:7:12	0	VALUE	Rewards in last 100 rounds: -1
+0::0:7:12	4	VALUE	Rewards in last 100 rounds: -37
+0::0:7:21	0	VALUE	Rewards in last 100 rounds: -2
+0::0:7:21	1	VALUE	Rewards in last 100 rounds: 6
+0::0:7:21	2	VALUE	Rewards in last 100 rounds: 4
+0::0:7:21	3	VALUE	Rewards in last 100 rounds: 5
+0::0:7:21	4	VALUE	Rewards in last 100 rounds: -8
+0::0:7:31	0	VALUE	Rewards in last 100 rounds: 12
+0::0:7:31	3	VALUE	Rewards in last 100 rounds: -5
+0::0:7:31	2	VALUE	Rewards in last 100 rounds: -4
+0::0:7:31	1	VALUE	Rewards in last 100 rounds: 3
+0::0:7:31	4	VALUE	Rewards in last 100 rounds: -17
+0::0:7:41	2	VALUE	Rewards in last 100 rounds: -3
+0::0:7:41	3	VALUE	Rewards in last 100 rounds: 5
+0::0:7:41	0	VALUE	Rewards in last 100 rounds: 2
+0::0:7:41	1	VALUE	Rewards in last 100 rounds: 2
+0::0:7:41	4	VALUE	Rewards in last 100 rounds: -26
+0::0:7:50	1	VALUE	Rewards in last 100 rounds: -2
+0::0:7:50	3	VALUE	Rewards in last 100 rounds: 2
+0::0:7:50	2	VALUE	Rewards in last 100 rounds: -8
+0::0:7:50	0	VALUE	Rewards in last 100 rounds: -1
+0::0:7:50	4	VALUE	Rewards in last 100 rounds: -33
+0::0:8:0	1	VALUE	Rewards in last 100 rounds: 7
+0::0:8:0	2	VALUE	Rewards in last 100 rounds: 4
+0::0:8:0	3	VALUE	Rewards in last 100 rounds: 1
+0::0:8:0	0	VALUE	Rewards in last 100 rounds: 14
+0::0:8:0	4	VALUE	Rewards in last 100 rounds: -7
+0::0:8:9	2	VALUE	Rewards in last 100 rounds: -5
+0::0:8:9	0	VALUE	Rewards in last 100 rounds: 5
+0::0:8:9	1	VALUE	Rewards in last 100 rounds: 22
+0::0:8:9	3	VALUE	Rewards in last 100 rounds: 3
+0::0:8:10	4	VALUE	Rewards in last 100 rounds: -15
+0::0:8:19	1	VALUE	Rewards in last 100 rounds: 1
+0::0:8:19	0	VALUE	Rewards in last 100 rounds: 6
+0::0:8:19	2	VALUE	Rewards in last 100 rounds: 5
+0::0:8:19	3	VALUE	Rewards in last 100 rounds: 15
+0::0:8:19	4	VALUE	Rewards in last 100 rounds: -21
+0::0:8:29	3	VALUE	Rewards in last 100 rounds: 10
+0::0:8:29	0	VALUE	Rewards in last 100 rounds: 17
+0::0:8:29	2	VALUE	Rewards in last 100 rounds: 2
+0::0:8:29	1	VALUE	Rewards in last 100 rounds: 3
+0::0:8:29	4	VALUE	Rewards in last 100 rounds: -11
+0::0:8:38	2	VALUE	Rewards in last 100 rounds: 4
+0::0:8:38	0	VALUE	Rewards in last 100 rounds: 5
+0::0:8:38	1	VALUE	Rewards in last 100 rounds: -1
+0::0:8:38	3	VALUE	Rewards in last 100 rounds: -1
+0::0:8:38	4	VALUE	Rewards in last 100 rounds: -28
+0::0:8:48	0	VALUE	Rewards in last 100 rounds: -3
+0::0:8:48	3	VALUE	Rewards in last 100 rounds: 0
+0::0:8:48	2	VALUE	Rewards in last 100 rounds: 2
+0::0:8:48	1	VALUE	Rewards in last 100 rounds: 6
+0::0:8:48	4	VALUE	Rewards in last 100 rounds: -10
+0::0:8:58	0	VALUE	Rewards in last 100 rounds: -5
+0::0:8:58	2	VALUE	Rewards in last 100 rounds: 21
+0::0:8:58	1	VALUE	Rewards in last 100 rounds: 2
+0::0:8:58	3	VALUE	Rewards in last 100 rounds: 1
+0::0:8:58	4	VALUE	Rewards in last 100 rounds: -36
+0::0:9:7	2	VALUE	Rewards in last 100 rounds: -1
+0::0:9:7	0	VALUE	Rewards in last 100 rounds: 10
+0::0:9:7	3	VALUE	Rewards in last 100 rounds: -6
+0::0:9:7	1	VALUE	Rewards in last 100 rounds: -1
+0::0:9:7	4	VALUE	Rewards in last 100 rounds: -36
+0::0:9:17	0	VALUE	Rewards in last 100 rounds: 0
+0::0:9:17	2	VALUE	Rewards in last 100 rounds: 11
+0::0:9:17	3	VALUE	Rewards in last 100 rounds: -2
+0::0:9:17	1	VALUE	Rewards in last 100 rounds: 14
+0::0:9:17	4	VALUE	Rewards in last 100 rounds: -18
+0::0:9:27	1	VALUE	Rewards in last 100 rounds: 12
+0::0:9:27	0	VALUE	Rewards in last 100 rounds: 2
+0::0:9:27	3	VALUE	Rewards in last 100 rounds: 6
+0::0:9:27	2	VALUE	Rewards in last 100 rounds: 8
+0::0:9:27	4	VALUE	Rewards in last 100 rounds: -26
+0::0:9:36	2	VALUE	Rewards in last 100 rounds: 15
+0::0:9:36	3	VALUE	Rewards in last 100 rounds: 14
+0::0:9:36	1	VALUE	Rewards in last 100 rounds: -2
+0::0:9:36	0	VALUE	Rewards in last 100 rounds: 16
+0::0:9:36	4	VALUE	Rewards in last 100 rounds: -32
+0::0:9:46	0	VALUE	Rewards in last 100 rounds: -1
+0::0:9:46	2	VALUE	Rewards in last 100 rounds: 0
+0::0:9:46	1	VALUE	Rewards in last 100 rounds: 5
+0::0:9:46	3	VALUE	Rewards in last 100 rounds: -9
+0::0:9:46	4	VALUE	Rewards in last 100 rounds: -33
+0::0:9:56	1	VALUE	Rewards in last 100 rounds: -6
+0::0:9:56	2	VALUE	Rewards in last 100 rounds: 1
+0::0:9:56	0	VALUE	Rewards in last 100 rounds: 13
+0::0:9:56	3	VALUE	Rewards in last 100 rounds: 16
+0::0:9:56	4	VALUE	Rewards in last 100 rounds: -36
+0::0:10:6	3	VALUE	Rewards in last 100 rounds: 2
+0::0:10:6	1	VALUE	Rewards in last 100 rounds: 4
+0::0:10:6	2	VALUE	Rewards in last 100 rounds: -1
+0::0:10:6	0	VALUE	Rewards in last 100 rounds: 16
+0::0:10:6	4	VALUE	Rewards in last 100 rounds: -33
+0::0:10:15	3	VALUE	Rewards in last 100 rounds: 15
+0::0:10:15	2	VALUE	Rewards in last 100 rounds: -6
+0::0:10:15	1	VALUE	Rewards in last 100 rounds: 9
+0::0:10:15	0	VALUE	Rewards in last 100 rounds: -6
+0::0:10:15	4	VALUE	Rewards in last 100 rounds: -36
+0::0:10:25	3	VALUE	Rewards in last 100 rounds: 9
+0::0:10:25	2	VALUE	Rewards in last 100 rounds: -5
+0::0:10:25	1	VALUE	Rewards in last 100 rounds: 10
+0::0:10:25	0	VALUE	Rewards in last 100 rounds: 0
+0::0:10:25	4	VALUE	Rewards in last 100 rounds: -21
+0::0:10:35	2	VALUE	Rewards in last 100 rounds: 5
+0::0:10:35	0	VALUE	Rewards in last 100 rounds: 4
+0::0:10:35	1	VALUE	Rewards in last 100 rounds: 1
+0::0:10:35	3	VALUE	Rewards in last 100 rounds: 10
+0::0:10:35	4	VALUE	Rewards in last 100 rounds: -23
+0::0:10:44	2	VALUE	Rewards in last 100 rounds which counts towards the score: 2
+0::0:10:44	1	VALUE	Rewards in last 100 rounds which counts towards the score: 4
+0::0:10:44	3	VALUE	Rewards in last 100 rounds which counts towards the score: -2
+0::0:10:44	0	VALUE	Rewards in last 100 rounds which counts towards the score: -1
+0::0:10:44	4	VALUE	Rewards in last 100 rounds which counts towards the score: -29
+0::0:10:54	0	VALUE	Rewards in last 100 rounds which counts towards the score: 9
+0::0:10:54	1	VALUE	Rewards in last 100 rounds which counts towards the score: 11
+0::0:10:54	3	VALUE	Rewards in last 100 rounds which counts towards the score: 10
+0::0:10:54	2	VALUE	Rewards in last 100 rounds which counts towards the score: 1
+0::0:10:54	4	VALUE	Rewards in last 100 rounds which counts towards the score: -35
+0::0:11:4	1	VALUE	Rewards in last 100 rounds which counts towards the score: 4
+0::0:11:4	3	VALUE	Rewards in last 100 rounds which counts towards the score: 5
+0::0:11:4	2	VALUE	Rewards in last 100 rounds which counts towards the score: 5
+0::0:11:4	0	VALUE	Rewards in last 100 rounds which counts towards the score: -2
+0::0:11:4	4	VALUE	Rewards in last 100 rounds which counts towards the score: -20
+0::0:11:13	3	VALUE	Rewards in last 100 rounds which counts towards the score: 15
+0::0:11:13	1	VALUE	Rewards in last 100 rounds which counts towards the score: 14
+0::0:11:13	2	VALUE	Rewards in last 100 rounds which counts towards the score: 3
+0::0:11:13	0	VALUE	Rewards in last 100 rounds which counts towards the score: 5
+0::0:11:13	4	VALUE	Rewards in last 100 rounds which counts towards the score: -15
+0::0:11:23	1	VALUE	Rewards in last 100 rounds which counts towards the score: 10
+0::0:11:23	2	VALUE	Rewards in last 100 rounds which counts towards the score: 4
+0::0:11:23	0	VALUE	Rewards in last 100 rounds which counts towards the score: 15
+0::0:11:23	3	VALUE	Rewards in last 100 rounds which counts towards the score: -1
+0::0:11:23	4	VALUE	Rewards in last 100 rounds which counts towards the score: -29
+0::0:11:33	1	VALUE	Rewards in last 100 rounds which counts towards the score: -7
+0::0:11:33	3	VALUE	Rewards in last 100 rounds which counts towards the score: 4
+0::0:11:33	2	VALUE	Rewards in last 100 rounds which counts towards the score: 17
+0::0:11:33	0	VALUE	Rewards in last 100 rounds which counts towards the score: 2
+0::0:11:33	4	VALUE	Rewards in last 100 rounds which counts towards the score: -16
+0::0:11:43	0	VALUE	Rewards in last 100 rounds which counts towards the score: 0
+0::0:11:43	2	VALUE	Rewards in last 100 rounds which counts towards the score: 9
+0::0:11:43	1	VALUE	Rewards in last 100 rounds which counts towards the score: -3
+0::0:11:43	3	VALUE	Rewards in last 100 rounds which counts towards the score: 4
+0::0:11:43	4	VALUE	Rewards in last 100 rounds which counts towards the score: -26
+0::0:11:52	2	VALUE	Rewards in last 100 rounds which counts towards the score: 8
+0::0:11:52	3	VALUE	Rewards in last 100 rounds which counts towards the score: 7
+0::0:11:52	1	VALUE	Rewards in last 100 rounds which counts towards the score: -7
+0::0:11:52	0	VALUE	Rewards in last 100 rounds which counts towards the score: -1
+0::0:11:52	4	VALUE	Rewards in last 100 rounds which counts towards the score: -25
+0::0:12:2	0	VALUE	Rewards in last 100 rounds which counts towards the score: 13
+0::0:12:2	2	VALUE	Rewards in last 100 rounds which counts towards the score: 5
+0::0:12:2	3	VALUE	Rewards in last 100 rounds which counts towards the score: -2
+0::0:12:2	1	VALUE	Rewards in last 100 rounds which counts towards the score: 7
+0::0:12:2	4	VALUE	Rewards in last 100 rounds which counts towards the score: -21

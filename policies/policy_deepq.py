@@ -19,8 +19,8 @@ LEARNING_RATE = 0.001
 
 NUM_ACTIONS = 3  # (L, R, F)
 # BATCH_SIZE = 15
-VICINITY = 4
-MAX_DISTANCE = 3
+VICINITY = 3
+MAX_DISTANCE = 2
 
 #FEATURE_NUM = 11 # *(VICINITY*2+3)  # 10 symbols, Vicinity*2: max distance, +1 if zero distance, +1 for amount of symbols, +1 for what is on next field (like linear)
 #INPUT_SHAPE = (FEATURE_NUM, )
@@ -43,7 +43,8 @@ class MyPolicy(bp.Policy):
         self.r_sum = 0
         self.vicinity = VICINITY
         self.max_distance = MAX_DISTANCE
-        self.feature_num = (self.max_distance+1+1)*11 + 1  # + self.vicinity**2
+        self.feature_num = (self.max_distance+1+1)*11 + 1 + ((self.vicinity*2+1)**2*11)
+        self.section_indices = np.array(range((self.vicinity*2+1)**2)) * 11
         self.input_shape = (self.feature_num, )
         self.Q = DQN.DQNetwork(input_shape=self.input_shape, alpha=0.5, gamma=0.8,
                                dropout_rate=0.1, num_actions=NUM_ACTIONS, batch_size=self.batch_size,
@@ -174,13 +175,29 @@ class MyPolicy(bp.Policy):
     #
     #     return features
 
+    def getVicinityRepresentation(self, VicinityMap):
+        symbols = np.matrix(VicinityMap.flatten())
+        # print('symbols shape exp 49:', symbols, symbols.shape)
+        symbols = symbols[0]
+        features = np.zeros(symbols.shape[1]*11)
+
+        section_indices = self.section_indices
+        symbol_idx = symbols + section_indices + 1
+        # print('symbols, section_idx:   ', symbols, section_indices)
+        # print(symbol_idx, symbol_idx.shape)
+        symbol_idx_list = symbol_idx.tolist()[0]
+        idx_int = [int(x) for x in symbol_idx_list]
+        features[idx_int] = 1
+        return features
+
     def getFeature_2(self, board, head, action):
         head_pos, direction = head
         moving_dir = bp.Policy.TURNS[direction][action]
         next_position = head_pos.move(moving_dir)
         map_v = self.getVicinityMap(board, next_position, moving_dir)
         center = (self.vicinity, self.vicinity)
-        features = np.zeros(self.feature_num)
+
+        features_1 = np.zeros((self.max_distance+1+1)*11 + 1)
 
         # what is in next field (like in linear policy)
         # r, c = next_position
@@ -190,13 +207,13 @@ class MyPolicy(bp.Policy):
         # features[feature_idx] = 1
 
         # how long are we
-        features[-1] = (board == self.id).sum()
+        features_1[0] = (board == self.id).sum()
 
         for field_value in range(-1, 10):
-            # how many elements do we have
-            offset = 1
+            # how many elements do we have in vicinity
+            offset = 2
             feature_idx = int(field_value) + offset
-            features[feature_idx] = (map_v == field_value).sum()
+            features_1[feature_idx] = (map_v == field_value).sum()
 
             m = (map_v == field_value)
             field_positions = np.matrix(np.where(m)).T
@@ -207,13 +224,18 @@ class MyPolicy(bp.Policy):
                 dist = abs(center[0] - x) + abs(center[1] - y)
                 distances.append(dist)
 
-            # fill feautre vector
+            # fill feature vector
             for dist in range(0, self.max_distance + 1):
-                offset = 12
+                offset = 13
                 if dist in distances:
                     idx = int(field_value) + (dist * 11) + offset
-                    features[idx] = 1
+                    features_1[idx] = 1
 
+        features_2 = self.getVicinityRepresentation(map_v)
+
+        # print('features1 shape 45, features 2 shape 539 ', features_1.shape, features_2.shape)
+        features = np.append(features_1, features_2)
+        # print('features 539 + 45 ',features.shape)
         features = features/features.sum()
         return features
 
@@ -237,7 +259,6 @@ class MyPolicy(bp.Policy):
 
 
     def act(self, round, prev_state, prev_action, reward, new_state, too_slow):
-
         board, head = new_state
         new_features = np.zeros([len(self.act2idx), self.feature_num])
         for a in self.act2idx:

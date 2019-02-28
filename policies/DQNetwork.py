@@ -19,7 +19,7 @@ class DQNetwork():
             # Dense(256, activation='relu', input_shape=self.input_shape),
             # Dropout(0.3),
             #Dense(64, activation='relu'),
-            Dense(8, activation='relu', input_shape=self.input_shape),
+            Dense(128, activation='relu', input_shape=self.input_shape),
             # Dropout(0.3),
             # Dense(self.n_features, activation='relu'),
             Dropout(0.1),
