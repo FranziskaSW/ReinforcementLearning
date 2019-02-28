@@ -11,11 +11,11 @@ global cwd
 cwd = os.getcwd()
 
 
-EPSILON = 0.5
-EPSILON_RATE = 0.999
+EPSILON = 0.3
+EPSILON_RATE = 0.9999
 # GAMMA = 0.5
 DROPOUT_RATE = 0.2
-LEARNING_RATE = 0.001
+LEARNING_RATE = 0.0001
 
 NUM_ACTIONS = 3  # (L, R, F)
 # BATCH_SIZE = 15
@@ -25,8 +25,9 @@ MAX_DISTANCE = 2
 #FEATURE_NUM = 11 # *(VICINITY*2+3)  # 10 symbols, Vicinity*2: max distance, +1 if zero distance, +1 for amount of symbols, +1 for what is on next field (like linear)
 #INPUT_SHAPE = (FEATURE_NUM, )
 MEMORY_LENGTH = 2000 #BATCH_SIZE*20
-BATCH_SIZE = 32
+BATCH_SIZE = 64
 GAMMA = 0.5
+
 class MyPolicy(bp.Policy):
     """
     """
@@ -68,8 +69,9 @@ class MyPolicy(bp.Policy):
 
     def learn(self, round, prev_state, prev_action, reward, new_state, too_slow):
 
-        while self.epsilon >= 0.2:
+        if self.epsilon >= 0.1:
             self.epsilon = self.epsilon * self.epsilon_rate
+            print(round, self.epsilon)
 
         if round >= self.batch_size:
             bs_int = int(self.batch_size)

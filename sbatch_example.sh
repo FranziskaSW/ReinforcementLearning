@@ -10,7 +10,7 @@ source /cs/labs/shais/dsgissin/apml_snake/bin/activate.csh
 module load tensorflow
 
 python3 /cs/usr/franziska/Documents/ReinforcementLearning/Snake.py \
-    -P "Avoid(epsilon=0.1);MyPolicy(epsilon=0.4);MyPolicy(epsilon=0.5);MyPolicy(epsilon=0.6);MyPolicy(epsilon=0.7)" \
+    -P "Avoid(epsilon=0.1);MyPolicy(epsilon=0.1);MyPolicy(epsilon=0.2);MyPolicy(epsilon=0.3);MyPolicy(epsilon=0.4)" \
     -D 20000 -s 2000 -r 0 -plt 0.05 -pat 0.01 -pit 60 \
     -l match_05_eps.log \
     -o match_05_eps.out \
