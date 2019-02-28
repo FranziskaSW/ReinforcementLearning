@@ -11,7 +11,7 @@ global cwd
 cwd = os.getcwd()
 
 
-EPSILON = 0.2
+EPSILON = 0.5
 EPSILON_RATE = 0.999
 # GAMMA = 0.5
 DROPOUT_RATE = 0.2
@@ -33,6 +33,7 @@ class MyPolicy(bp.Policy):
 
     def cast_string_args(self, policy_args):
         policy_args['epsilon'] = float(policy_args['epsilon']) if 'epsilon' in policy_args else EPSILON
+        policy_args['epsilon_rate'] = float(policy_args['epsilon_rate']) if 'epsilon_rate' in policy_args else EPSILON_RATE
         policy_args['batch_size'] = float(policy_args['batch_size']) if 'batch_size' in policy_args else BATCH_SIZE
         policy_args['vicinity'] = float(policy_args['vicinity']) if 'vicinity' in policy_args else VICINITY
         policy_args['learning_rate'] = float(policy_args['learning_rate']) if 'learning_rate' in policy_args else LEARNING_RATE
@@ -53,7 +54,7 @@ class MyPolicy(bp.Policy):
         self.loss = []
         self.act2idx = {'L': 0, 'R': 1, 'F': 2}
         self.idx2act = {0: 'L', 1: 'R', 2: 'F'}
-        self.memory_length = self.batch_size*15
+        self.memory_length = self.batch_size*20
 
 
     def put_stats(self):  # TODO remove after testing
@@ -66,6 +67,9 @@ class MyPolicy(bp.Policy):
 
 
     def learn(self, round, prev_state, prev_action, reward, new_state, too_slow):
+
+        while self.epsilon >= 0.2:
+            self.epsilon = self.epsilon * self.epsilon_rate
 
         if round >= self.batch_size:
             bs_int = int(self.batch_size)
