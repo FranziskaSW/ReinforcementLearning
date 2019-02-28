@@ -25,7 +25,7 @@ class Linear(bp.Policy):
     def init_run(self):
         self.r_sum = 0
         weights = np.matrix(np.random.uniform(0, 1, FEATURE_NUM))
-        self.weights = np.zeros((1, FEATURE_NUM)) # weights / weights.sum()
+        self.weights = weights / weights.sum()
         self.features = np.zeros(FEATURE_NUM)
         self.last_actions = []  #
         self.last_qvalues = []
@@ -39,18 +39,14 @@ class Linear(bp.Policy):
 
     def learn(self, round, prev_state, prev_action, reward, new_state, too_slow):
 
-        #last_features = self.last_features[-1]
-        #delta = self.last_deltas[-1]
-
-        #last_features = self.last_features
-
-
-        #self.epsilon = self.epsilon * EPSILON_RATE
+        if self.epsilon >= 0.1:
+            self.epsilon = self.epsilon * self.epsilon_rate
 
         feature_mat = np.matrix(self.last_features)
         delta_mat = np.matrix(self.last_deltas)
 
         self.weights = self.weights - self.learning_rate * (delta_mat.dot(feature_mat))/len(self.last_deltas)
+        self.weights = self.weights/self.weights.sum()
 
         self.last_features = []
         self.last_deltas = []
@@ -84,24 +80,9 @@ class Linear(bp.Policy):
         q_value = self.weights[0, idx]
         return q_value, features
 
-        #
-        # if field >= 0 and field < 6:
-        #     return 0, features
-        # else:
-        #     # which food is there
-        #     if field == 6: idx=0
-        #     if field == 7: idx=1
-        #     if field == 8: idx=2
-        #     # now check if next field is free
-        #     if field < 0: idx=3
-        #     features[idx] = 1
-        #     q_value = weights[0, idx]  # + bias
-        #     return q_value, features
-
-
     def act(self, round, prev_state, prev_action, reward, new_state, too_slow):
 
-        if np.random.rand() < self.epsilon:
+        if (np.random.rand() < self.epsilon) & (round < self.game_duration - self.score_scope):
             action = np.random.choice(bp.Policy.ACTIONS)
             q_max, features = self.getQValue(new_state, action)
 
@@ -111,7 +92,7 @@ class Linear(bp.Policy):
                    'action': []}
             for dir_idx, a in enumerate(list(np.random.permutation(bp.Policy.ACTIONS))):
 
-                q_value, features_a = self.getQValue(new_state, a)  # getQValue(a, next_position, board, direction)
+                q_value, features_a = self.getQValue(new_state, a)
                 res['features'].append(features_a)
                 res['action'].append(a)
                 res['q_values'][dir_idx] = q_value
@@ -122,13 +103,9 @@ class Linear(bp.Policy):
         if round <= 1:
             delta = 0
         else:
-            # print(self.last_qvalues, self.last_actions, self.last_deltas)
-
             prev_qvalue, prev_features = self.getQValue(prev_state, prev_action)
             delta = prev_qvalue - (reward + (self.gamma * q_max))
 
-        # self.last_actions.append(action)
-        # self.last_qvalues.append(q_max)
         self.last_features.append(features)
         self.last_deltas.append(delta)
         return action

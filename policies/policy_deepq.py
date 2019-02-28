@@ -20,6 +20,7 @@ VICINITY = 3
 MAX_DISTANCE = 2
 BATCH_SIZE = 64
 GAMMA = 0.5
+DROPOUT_RATE = 0.2
 
 class MyPolicy(bp.Policy):
     """
@@ -38,11 +39,11 @@ class MyPolicy(bp.Policy):
         self.r_sum = 0
         self.vicinity = VICINITY
         self.max_distance = MAX_DISTANCE
-        self.feature_num = (self.vicinity*2+1)**2*11 +1 # (self.max_distance+1+1)*11 + 1 + ((self.vicinity*2+1)**2*11)
+        self.feature_num = (self.vicinity*2+1)**2*11 +1  # (self.max_distance+1+1)*11 + 1 + ((self.vicinity*2+1)**2*11)
         self.section_indices = np.array(range((self.vicinity*2+1)**2)) * 11
         self.input_shape = (self.feature_num, )
         self.Q = DQN.DQNetwork(input_shape=self.input_shape, alpha=0.5, gamma=0.8,
-                               dropout_rate=0.2, num_actions=NUM_ACTIONS, batch_size=self.batch_size,
+                               dropout_rate=DROPOUT_RATE, num_actions=NUM_ACTIONS, batch_size=self.batch_size,
                                learning_rate=self.learning_rate, feature_num=self.feature_num)
         self.memory = []
         self.loss = []
@@ -227,28 +228,12 @@ class MyPolicy(bp.Policy):
         features = features/features.sum()
         return features
 
-    # TODO: add features
-    #       - other elements on board
-    #       - own length
-    #
-    # def getFeatures(self, board, head):
-    #     features = np.zeros([3, FEATURE_NUM])
-    #     head_pos, direction = head2
-    #     for a in self.act2idx:
-    #         moving_dir = bp.Policy.TURNS[direction][a]
-    #         next_position = head_pos.move(moving_dir)
-    #         map_after = self.getVicinityMap(board, next_position, moving_dir)  # map around head and turned so that snakes looks to the top
-    #         features[self.act2idx[a]] = map_after.flatten()
-    #     # print('f1: ', features.shape)
-    #     # features = features.flatten()
-    #     # features = features/features.sum()
-    #     # print('flatten: ', features.shape)
-    #     return features
-
-
     def act(self, round, prev_state, prev_action, reward, new_state, too_slow):
         board, head = new_state
         new_features = np.zeros([len(self.act2idx), self.feature_num])
+
+        print(round, self.game_duration, self.score_scope)
+
         for a in self.act2idx:
             new_features[self.act2idx[a]] = self.getFeature_2(board, head, a)
 
@@ -269,7 +254,7 @@ class MyPolicy(bp.Policy):
                 pickle.dump(losses, f)
 
         # act in new round, decide for new_state
-        if np.random.rand() < self.epsilon:
+        if (np.random.rand() < self.epsilon) & (round < self.game_duration - self.score_scope):
             action = np.random.choice(bp.Policy.ACTIONS)
 
         else:
