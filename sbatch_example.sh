@@ -25,7 +25,7 @@ python3 /cs/usr/franziska/Documents/ReinforcementLearning/Snake.py \
 
 
 python3 /cs/usr/franziska/Documents/ReinforcementLearning/Snake.py \
-    -P "Avoid(epsilon=0.1);MyPolicy(learning_rate=0.01);MyPolicy(learning_rate=0.001);MyPolicy(learning_rate=0.0001);MyPolicy(learning_rate=0.0001)" \
+    -P "Avoid(epsilon=0.1);MyPolicy(learning_rate=0.01);MyPolicy(learning_rate=0.001);MyPolicy(learning_rate=0.0001);MyPolicy(learning_rate=0.00001)" \
     -D 20000 -s 2000 -r 0 -plt 0.05 -pat 0.01 -pit 60 \
     -l match_05_lr.log \
     -o match_05_lr.out \

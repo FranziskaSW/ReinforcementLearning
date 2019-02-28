@@ -13,18 +13,11 @@ cwd = os.getcwd()
 
 EPSILON = 0.3
 EPSILON_RATE = 0.9999
-# GAMMA = 0.5
-DROPOUT_RATE = 0.2
 LEARNING_RATE = 0.0001
 
 NUM_ACTIONS = 3  # (L, R, F)
-# BATCH_SIZE = 15
 VICINITY = 3
 MAX_DISTANCE = 2
-
-#FEATURE_NUM = 11 # *(VICINITY*2+3)  # 10 symbols, Vicinity*2: max distance, +1 if zero distance, +1 for amount of symbols, +1 for what is on next field (like linear)
-#INPUT_SHAPE = (FEATURE_NUM, )
-MEMORY_LENGTH = 2000 #BATCH_SIZE*20
 BATCH_SIZE = 64
 GAMMA = 0.5
 
@@ -45,11 +38,11 @@ class MyPolicy(bp.Policy):
         self.r_sum = 0
         self.vicinity = VICINITY
         self.max_distance = MAX_DISTANCE
-        self.feature_num = (self.max_distance+1+1)*11 + 1 + ((self.vicinity*2+1)**2*11)
+        self.feature_num = (self.vicinity*2+1)**2*11 +1 # (self.max_distance+1+1)*11 + 1 + ((self.vicinity*2+1)**2*11)
         self.section_indices = np.array(range((self.vicinity*2+1)**2)) * 11
         self.input_shape = (self.feature_num, )
         self.Q = DQN.DQNetwork(input_shape=self.input_shape, alpha=0.5, gamma=0.8,
-                               dropout_rate=0.1, num_actions=NUM_ACTIONS, batch_size=self.batch_size,
+                               dropout_rate=0.2, num_actions=NUM_ACTIONS, batch_size=self.batch_size,
                                learning_rate=self.learning_rate, feature_num=self.feature_num)
         self.memory = []
         self.loss = []
@@ -71,7 +64,7 @@ class MyPolicy(bp.Policy):
 
         if self.epsilon >= 0.1:
             self.epsilon = self.epsilon * self.epsilon_rate
-            print(round, self.epsilon)
+            # print(round, self.epsilon)
 
         if round >= self.batch_size:
             bs_int = int(self.batch_size)
@@ -183,14 +176,11 @@ class MyPolicy(bp.Policy):
 
     def getVicinityRepresentation(self, VicinityMap):
         symbols = np.matrix(VicinityMap.flatten())
-        # print('symbols shape exp 49:', symbols, symbols.shape)
         symbols = symbols[0]
         features = np.zeros(symbols.shape[1]*11)
 
         section_indices = self.section_indices
         symbol_idx = symbols + section_indices + 1
-        # print('symbols, section_idx:   ', symbols, section_indices)
-        # print(symbol_idx, symbol_idx.shape)
         symbol_idx_list = symbol_idx.tolist()[0]
         idx_int = [int(x) for x in symbol_idx_list]
         features[idx_int] = 1
@@ -203,42 +193,34 @@ class MyPolicy(bp.Policy):
         map_v = self.getVicinityMap(board, next_position, moving_dir)
         center = (self.vicinity, self.vicinity)
 
-        features_1 = np.zeros((self.max_distance+1+1)*11 + 1)
-
-        # what is in next field (like in linear policy)
-        # r, c = next_position
-        # field_value = board[r, c]
-        # offset = 1
-        # feature_idx = int(field_value) + offset
-        # features[feature_idx] = 1
-
-        # how long are we
-        features_1[0] = (board == self.id).sum()
-
-        for field_value in range(-1, 10):
-            # how many elements do we have in vicinity
-            offset = 2
-            feature_idx = int(field_value) + offset
-            features_1[feature_idx] = (map_v == field_value).sum()
-
-            m = (map_v == field_value)
-            field_positions = np.matrix(np.where(m)).T
-
-            distances = []
-            for field_pos in field_positions:
-                x, y = field_pos.tolist()[0][0], field_pos.tolist()[0][1]
-                dist = abs(center[0] - x) + abs(center[1] - y)
-                distances.append(dist)
-
-            # fill feature vector
-            for dist in range(0, self.max_distance + 1):
-                offset = 13
-                if dist in distances:
-                    idx = int(field_value) + (dist * 11) + offset
-                    features_1[idx] = 1
-
+        # features_1 = np.zeros((self.max_distance+1+1)*11 + 1)
+        #
+        # # how long are we
+        # features_1[0] = (board == self.id).sum()
+        #
+        # for field_value in range(-1, 10):
+        #     # how many elements do we have in vicinity
+        #     offset = 2
+        #     feature_idx = int(field_value) + offset
+        #     features_1[feature_idx] = (map_v == field_value).sum()
+        #
+        #     m = (map_v == field_value)
+        #     field_positions = np.matrix(np.where(m)).T
+        #
+        #     distances = []
+        #     for field_pos in field_positions:
+        #         x, y = field_pos.tolist()[0][0], field_pos.tolist()[0][1]
+        #         dist = abs(center[0] - x) + abs(center[1] - y)
+        #         distances.append(dist)
+        #
+        #     # fill feature vector
+        #     for dist in range(0, self.max_distance + 1):
+        #         offset = 13
+        #         if dist in distances:
+        #             idx = int(field_value) + (dist * 11) + offset
+        #             features_1[idx] = 1
+        features_1 = np.array((board==self.id).sum())
         features_2 = self.getVicinityRepresentation(map_v)
-
         # print('features1 shape 45, features 2 shape 539 ', features_1.shape, features_2.shape)
         features = np.append(features_1, features_2)
         # print('features 539 + 45 ',features.shape)

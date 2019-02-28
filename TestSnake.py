@@ -789,16 +789,16 @@ if __name__ == '__main__':
         players.append('Avoid(epsilon=0.1)')
 
     # create our agent:
-    params = {'epsilon': [0.4, 0.5, 0.6, 0.7],
+    params = {'epsilon': [0.15, 0.2, 0.3, 0.4],
               'gamma': [0.1, 0.3, 0.5, 0.7, 0.9],
               'learning_rate': [0.01, 0.001, 0.0001, 0.00001],
-              'batch_size': [int(8), int(16), int(32), int(64), int(128)]
+              'batch_size': [4, 8, 16, 32, 64]
               }
 
     # test_params = ['epsilon', 'gamma', 'lr', 'bs']
-    test_params = args.__dict__['test_param'].split()  # tp
-    sessions = args.__dict__['sessions']  # ss
-    dir_suffix = args.__dict__['dir_suffix']  # ds
+    test_params = args.__dict__['test_param'].split() # tp
+    sessions = args.__dict__['sessions'] # ss
+    dir_suffix = args.__dict__['dir_suffix'] # ds
 
     for param in test_params:
         search_1d_param_space(param, dir_suffix, sessions, num_players=AVOIDS+1)

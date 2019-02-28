@@ -15,18 +15,11 @@ class DQNetwork():
         self.learning_rate = learning_rate
         self.act2idx = {'L': 0, 'R': 1, 'F': 2}
 
-        self.model = Sequential([
-            # Dense(256, activation='relu', input_shape=self.input_shape),
-            # Dropout(0.3),
-            #Dense(64, activation='relu'),
-            Dense(64, activation='relu', input_shape=self.input_shape),
-            # Dropout(0.3),
-            # Dense(self.n_features, activation='relu'),
-            Dropout(0.2),
-            Dense(1),
-        ])
+        self.model = Sequential()
+        self.model.add(Dense(64, activation='relu', input_shape=self.input_shape))
+        self.model.add(Dropout(dropout_rate))
+        self.model.add(Dense(1))
         adam = keras.optimizers.Adam(lr=self.learning_rate, beta_1=0.9, beta_2=0.999, epsilon=1e-8)
-        # sgd = SGD(lr=self.lr)
         self.model.compile(loss='mean_squared_error', optimizer=adam)
 
         # self.tensorboard = TensorBoard(log_dir="logs/{}".format(time()))
