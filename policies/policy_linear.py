@@ -27,13 +27,15 @@ class Linear(bp.Policy):
         self.r_sum = 0
         weights = np.matrix(np.random.uniform(0, 1, FEATURE_NUM))
         self.weights = weights / weights.sum()
-        self.features = np.zeros(FEATURE_NUM)
-        self.last_actions = []  #
-        self.last_qvalues = []
+        # self.last_actions = []  #
+        # self.last_qvalues = []
         self.last_deltas = []
         self.last_features = []
         self.loss = [0]  # TODO  remove
         self.epsilon_rate = EPSILON_RATE
+        self.act2idx = {'L': 0, 'R': 1, 'F': 2}
+        self.idx2act = {0: 'L', 1: 'R', 2: 'F'}
+        self.feature_num = FEATURE_NUM
 
     def put_stats(self):  # TODO remove after testing
         pickle.dump(self.loss, open(self.dir_name + '/last_game_loss.pkl', 'wb'))
@@ -60,8 +62,8 @@ class Linear(bp.Policy):
         try:
             if round % 100 == 0:
                 if round > self.game_duration - self.score_scope:
-                    self.log("Rewards in last 100 rounds which counts towards the score: " + str(
-                        self.r_sum), 'VALUE')
+                    self.log("Rewards in last 100 rounds which counts towards the score: " +
+                             str(self.r_sum), 'VALUE')
                 else:
                     self.log("Rewards in last 100 rounds: " + str(self.r_sum), 'VALUE')
                 self.r_sum = 0
@@ -93,25 +95,23 @@ class Linear(bp.Policy):
             q_max, features = self.getQValue(new_state, action)
 
         else:
-            res = {'features': [],
-                   'q_values': np.zeros(3),
-                   'action': []}
-            for dir_idx, a in enumerate(list(np.random.permutation(bp.Policy.ACTIONS))):
-
+            res = {'features': np.zeros([len(self.act2idx), self.feature_num]),
+                   'q_values': np.zeros(3)}
+            # for dir_idx, a in enumerate(list(np.random.permutation(bp.Policy.ACTIONS))):
+            for a in self.act2idx:
                 q_value, features_a = self.getQValue(new_state, a)
-                res['features'].append(features_a)
-                res['action'].append(a)
-                res['q_values'][dir_idx] = q_value
+                res['features'][self.act2idx[a]] = features_a
+                res['q_values'][self.act2idx[a]] = q_value
 
             q_max, q_max_idx = np.max(res['q_values']), np.argmax(res['q_values'])
             features = res['features'][q_max_idx]
-            action = res['action'][q_max_idx]
+            action = self.idx2act[q_max_idx]
         if round <= 1:
             delta = 0
         else:
             prev_qvalue, prev_features = self.getQValue(prev_state, prev_action)
             delta = prev_qvalue - (reward + (self.gamma * q_max))
 
-        self.last_features.append(features)
+        self.last_features.append(prev_features) # is this is?
         self.last_deltas.append(delta)
         return action
