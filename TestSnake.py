@@ -27,7 +27,7 @@ from matplotlib import rcParams
 rcParams.update({'figure.autolayout': True})
 plt.style.use('ggplot')
 
-TEST_POLICY = 'MyPolicy'
+TEST_POLICY = 'Linear'
 
 EMPTY_VAL = -1
 MAX_PLAYERS = 5

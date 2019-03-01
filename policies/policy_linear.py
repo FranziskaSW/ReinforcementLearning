@@ -3,10 +3,11 @@ import numpy as np
 import operator
 import pickle  # TODO remove after testing
 
-EPSILON = 0.05
+EPSILON = 0.3
 EPSILON_RATE = 0.9999
 GAMMA = 0.8
 LEARNING_RATE = 0.01
+
 FEATURE_NUM = 11  # len(['Food1', 'Food2', 'Food3', 'FieldEmpty'])
 
 class Linear(bp.Policy):
@@ -31,11 +32,16 @@ class Linear(bp.Policy):
         self.last_qvalues = []
         self.last_deltas = []
         self.last_features = []
+        self.loss = [0]  # TODO  remove
+        self.epsilon_rate = EPSILON_RATE
 
     def put_stats(self):  # TODO remove after testing
         pickle.dump(self.loss, open(self.dir_name + '/last_game_loss.pkl', 'wb'))
         pickle.dump(self.test(), open(self.dir_name + '/last_test_loss.pkl', 'wb'))
 
+    def test(self):  # TODO REMOVE AFTER TESTING
+        loss = self.loss
+        return loss
 
     def learn(self, round, prev_state, prev_action, reward, new_state, too_slow):
 

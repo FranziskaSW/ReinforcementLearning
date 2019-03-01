@@ -11,15 +11,15 @@ global cwd
 cwd = os.getcwd()
 
 
-EPSILON = 0.3
+EPSILON = 0.2
 EPSILON_RATE = 0.9999
 LEARNING_RATE = 0.0001
 
 NUM_ACTIONS = 3  # (L, R, F)
 VICINITY = 3
 MAX_DISTANCE = 2
-BATCH_SIZE = 64
-GAMMA = 0.5
+BATCH_SIZE = 32
+GAMMA = 0.7
 DROPOUT_RATE = 0.2
 
 class MyPolicy(bp.Policy):
@@ -65,7 +65,6 @@ class MyPolicy(bp.Policy):
 
         if self.epsilon >= 0.1:
             self.epsilon = self.epsilon * self.epsilon_rate
-            # print(round, self.epsilon)
 
         if round >= self.batch_size:
             bs_int = int(self.batch_size)
@@ -231,8 +230,6 @@ class MyPolicy(bp.Policy):
     def act(self, round, prev_state, prev_action, reward, new_state, too_slow):
         board, head = new_state
         new_features = np.zeros([len(self.act2idx), self.feature_num])
-
-        print(round, self.game_duration, self.score_scope)
 
         for a in self.act2idx:
             new_features[self.act2idx[a]] = self.getFeature_2(board, head, a)
